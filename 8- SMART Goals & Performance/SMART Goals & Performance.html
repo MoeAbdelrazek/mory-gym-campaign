@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haksoss Café SMART Goals & Performance</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(145deg,#fdf5ed,#fceedd);
+      margin: 0;
+      padding: 0;
+      color: #5a3e36;
+      line-height: 1.8;
+    }
+    #smart-goals {
+      padding:70px 20px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    #smart-goals h2 {
+      font-size:32px;
+      text-align:center;
+      margin-bottom:15px;
+    }
+    #smart-goals p {
+      font-size:20px;
+      text-align:center;
+      max-width:850px;
+      margin:0 auto 60px;
+    }
+    .smart-card {
+      flex:1 1 260px;
+      background-color:#d6c6b3;
+      color:#5a3e36;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      font-size:18px;
+      line-height:1.8;
+      transition:all 0.3s ease;
+    }
+    .smart-card h3 {
+      font-size:22px;
+      margin-bottom:10px;
+      color:#3c2b24;
+      text-align:left;
+    }
+    .smart-card:hover {
+      transform:translateY(-8px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
+    .kpi-box {
+      flex:1 1 500px;
+      background-color:#d6c6b3;
+      color:#5a3e36;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:all 0.3s ease;
+    }
+    .kpi-box:hover {
+      transform:translateY(-5px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+    .kpi-circle {
+      width:70px; height:70px;
+      border-radius:50%;
+      background-color:#fdf5ed;
+      color:#5a3e36;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-weight:bold;
+      font-size:18px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    }
+    @media(max-width:768px){
+      .smart-card, .kpi-box { flex:1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<section id="smart-goals">
+  <h2>SMART Goals & Performance</h2>
+  <p>
+    High-value, measurable objectives that guided the Haksoss Café campaign, ensuring all efforts contributed directly to revenue growth, brand loyalty, and customer engagement.
+  </p>
+
+  <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-bottom:60px;">
+    <div class="smart-card">
+      <h3>Specific</h3>
+      <p>Establish Haksoss Café as Alexandria’s top luxury morning destination via premium loyalty conversion.</p>
+      <p><strong>Target:</strong> 1,000 Sign-ups<br><strong>Actual:</strong> 1,070 Sign-ups</p>
+    </div>
+    <div class="smart-card">
+      <h3>Measurable</h3>
+      <p>Maximize financial efficiency and scalability of digital spend.</p>
+      <p><strong>Target ROI:</strong> 350%<br><strong>Actual ROI:</strong> 411%</p>
+    </div>
+    <div class="smart-card">
+      <h3>Achievable</h3>
+      <p>Leverage superior creative assets to generate interest and engagement among the target audience.</p>
+      <p><strong>Target Reach:</strong> 75,000<br><strong>Actual Reach:</strong> 80,800</p>
+    </div>
+    <div class="smart-card">
+      <h3>Relevant</h3>
+      <p>Support the brand vision: “Ultimate Luxury Morning Experience.”</p>
+      <p><strong>Target Sales Mix:</strong> 50%<br><strong>Actual:</strong> 58%</p>
+    </div>
+    <div class="smart-card">
+      <h3>Time-bound</h3>
+      <p>Execute full 10-step campaign sequence within 90 days.</p>
+      <p><strong>Duration:</strong> 90 Days<br><strong>Status:</strong> Achieved ✅</p>
+    </div>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+    <div class="kpi-box">
+      <h3 style="font-size:22px; text-align:center; margin-bottom:20px;">KPI Performance Overview</h3>
+      <canvas id="kpiGraph" width="500" height="300"></canvas>
+    </div>
+    <div class="kpi-box">
+      <h3 style="font-size:22px; text-align:center; margin-bottom:25px;">Campaign Achievement Summary</h3>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:center; gap:25px;">
+        <div style="text-align:center;">
+          <p style="font-size:18px;">Reach</p>
+          <div class="kpi-circle">80k</div>
+        </div>
+        <div style="text-align:center;">
+          <p style="font-size:18px;">Sign-ups</p>
+          <div class="kpi-circle">1,070</div>
+        </div>
+        <div style="text-align:center;">
+          <p style="font-size:18px;">Conversion</p>
+          <div class="kpi-circle">6.2%</div>
+        </div>
+        <div style="text-align:center;">
+          <p style="font-size:18px;">ROI</p>
+          <div class="kpi-circle">411%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('kpiGraph').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Reach', 'Sign-ups', 'Conversion %', 'ROI %'],
+      datasets: [{
+        label: 'Campaign KPI',
+        data: [80800, 1070, 6.2, 411],
+        backgroundColor: '#fdf5ed',
+        borderColor: '#5a3e36',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: true }
+      },
+      scales: {
+        x: { ticks: { color: '#5a3e36' } },
+        y: { beginAtZero: true, ticks: { color: '#5a3e36' } }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

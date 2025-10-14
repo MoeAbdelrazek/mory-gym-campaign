@@ -1,0 +1,144 @@
+<section id="testimonials">
+  <h2 class="section-title">Testimonials & User Feedback</h2>
+  <p class="section-intro">
+    Real reflections from clients, customers, and internal team members, highlighting the impact and success of the campaign.
+  </p>
+
+  <!-- Testimonials Cards -->
+  <div class="testimonial-cards">
+    
+    <!-- Client Feedback -->
+    <div class="testimonial-card">
+      <div class="card-header client">
+        <h3>Client Feedback</h3>
+      </div>
+      <div class="card-content">
+        <p>"The campaign exceeded our expectations — ROAS and engagement were outstanding. Haksoss truly captured our brand's premium essence." – <strong>Marketing Director, Haksoss Café</strong></p>
+        <div class="metrics">
+          <div class="metric"><span>Engagement:</span> 11.3%</div>
+          <div class="metric"><span>Conversions:</span> 6.2%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User / Customer Feedback -->
+    <div class="testimonial-card">
+      <div class="card-header user">
+        <h3>Customer Feedback</h3>
+      </div>
+      <div class="card-content">
+        <p>"I loved the Hero Latte! The storytelling on Instagram made me feel part of the VIP experience. Signed up immediately for the loyalty program." – <strong>@UPEliteAlex</strong></p>
+        <div class="metrics">
+          <div class="metric"><span>Social Shares:</span> 580</div>
+          <div class="metric"><span>UGC Rate:</span> 2.1%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Internal Team Reflections -->
+    <div class="testimonial-card">
+      <div class="card-header internal">
+        <h3>Internal Team Reflections</h3>
+      </div>
+      <div class="card-content">
+        <p>"The integration between social, email, and search campaigns worked flawlessly. Data-driven decisions during A/B testing were crucial for performance optimization." – <strong>Campaign Manager</strong></p>
+        <div class="metrics">
+          <div class="metric"><span>AB Tests:</span> 12 completed</div>
+          <div class="metric"><span>Winner Improvements:</span> +3% Open Rate, +0.8% Conversion</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supporting Quotes -->
+    <div class="testimonial-card">
+      <div class="card-header quotes">
+        <h3>Supporting Quotes</h3>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li>"High-value audiences love the personalized touch." – Social Media Analyst</li>
+          <li>"Seasonal visuals boosted engagement significantly." – Creative Lead</li>
+          <li>"Urgency language in CTAs increased conversion by 0.8%." – Paid Ads Specialist</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+#testimonials {
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin: 70px auto;
+  background: linear-gradient(145deg, #fdf5ed, #fceedd);
+  max-width: 1200px;
+  font-family: 'Times New Roman', serif;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+#testimonials .section-title {
+  text-align: center;
+  color: #5a3e36;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+#testimonials .section-intro {
+  text-align: center;
+  color: #5a3e36;
+  margin-bottom: 45px;
+  font-size: 20px;
+}
+
+/* Testimonials Cards */
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 30px;
+}
+.testimonial-card {
+  background: #d6bfa3;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(138,96,60,0.25);
+}
+.card-header {
+  padding: 14px;
+  border-radius: 18px 18px 0 0;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  color: #fff;
+  font-size: 22px;
+}
+.card-header.client { background: #a65f3b; }
+.card-header.user { background: #c08054; }
+.card-header.internal { background: #8b5e3c; }
+.card-header.quotes { background: #d69a7f; color: #5a3e2b; }
+
+.card-content {
+  padding: 20px;
+  color: #5a3e36;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.card-content p, .card-content ul { margin-bottom: 10px; }
+.card-content ul { padding-left: 25px; list-style-type: disc; }
+
+.metrics {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.metric {
+  font-size: 18px;
+  background: #f9ede3;
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #5a3e36;
+  font-weight: 600;
+}
+</style>

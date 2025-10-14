@@ -1,0 +1,219 @@
+<section id="retargeting-remarketing">
+  <h2 class="section-title">Retargeting & Remarketing: Maximizing Conversions from Warm Audiences</h2>
+  <p class="section-intro">
+    Strategically engaging users who have interacted with Haksoss content but have not yet converted — using multi-channel personalized messaging to boost efficiency and ROI.
+  </p>
+
+  <!-- Retargeting Audience Cards -->
+  <div class="retarget-cards">
+    <div class="retarget-card">
+      <div class="card-header awareness">
+        <h3>Audience Segmentation</h3>
+      </div>
+      <div class="card-content">
+        <p><strong>Segments:</strong></p>
+        <ul>
+          <li>Website visitors (last 7 days)</li>
+          <li>Cart abandoners</li>
+          <li>Email openers (no conversion)</li>
+          <li>Social engagers (liked/commented)</li>
+        </ul>
+        <p><strong>Goal:</strong> Deliver highly relevant content to increase conversion likelihood.</p>
+      </div>
+    </div>
+
+    <div class="retarget-card">
+      <div class="card-header conversion">
+        <h3>Channels & Content</h3>
+      </div>
+      <div class="card-content">
+        <p><strong>Channels:</strong> Facebook & Instagram Ads, Google Display, Email, Push Notifications</p>
+        <p><strong>Content Types:</strong></p>
+        <ul>
+          <li>Dynamic product ads (Hero Latte, Croissants, Seasonal Offers)</li>
+          <li>Short-form UGC clips for social media</li>
+          <li>Email reminders with VIP offers & urgency triggers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="retarget-card">
+      <div class="card-header retention">
+        <h3>Frequency & Timing</h3>
+      </div>
+      <div class="card-content">
+        <p><strong>Ad Frequency:</strong> 3–5 impressions/user/week</p>
+        <p><strong>Email Cadence:</strong> 2 follow-ups over 7 days post-abandonment</p>
+        <p><strong>Optimal Timing:</strong> Morning hours (7–10 AM) for premium breakfast engagement</p>
+      </div>
+    </div>
+
+    <div class="retarget-card">
+      <div class="card-header conversion">
+        <h3>Expected Conversions & ROI</h3>
+      </div>
+      <div class="card-content">
+        <p><strong>Target Conversion Rate:</strong> 8–10%</p>
+        <p><strong>Projected CPL:</strong> EGP 38–42</p>
+        <p><strong>Expected ROI:</strong> 4.5:1</p>
+        <p><strong>Insight:</strong> Retargeting warm audiences enhances efficiency over cold acquisition, driving high-LTV loyalty sign-ups.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Retargeting Charts -->
+  <div class="retarget-charts">
+    <div class="chart-card">
+      <h4>Expected Conversions per Segment</h4>
+      <canvas id="segmentConversions" height="120"></canvas>
+    </div>
+    <div class="chart-card">
+      <h4>Projected ROI by Channel</h4>
+      <canvas id="roiChart" height="120"></canvas>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Retargeting & Remarketing Section (Refined Latte Style) */
+#retargeting-remarketing {
+  font-family: 'Times New Roman', serif;
+  color: #5a3e36;
+  background: linear-gradient(145deg, #fdf5ed, #fceedd);
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin: 80px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #5a3e36;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 45px;
+  color: #7a5542;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Cards Layout */
+.retarget-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.retarget-card {
+  background: #fffaf6;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.retarget-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(90, 62, 54, 0.2);
+}
+
+.card-header {
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-header.awareness { background: #c08054; }
+.card-header.conversion { background: #a65f3b; }
+.card-header.retention  { background: #8b5e3c; }
+
+.card-content {
+  padding: 22px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.card-content ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+  list-style-type: disc;
+}
+
+/* Charts */
+.retarget-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.chart-card {
+  background: #fffaf5;
+  border: 1px solid #e2c9b7;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  text-align: center;
+}
+
+.chart-card h4 {
+  color: #5a3e36;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Segment Conversions Chart
+  new Chart(document.getElementById('segmentConversions').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: ['Website Visitors', 'Cart Abandoners', 'Email Openers', 'Social Engagers'],
+      datasets: [{
+        label: 'Expected Conversions',
+        data: [320, 210, 180, 150],
+        backgroundColor: ['#c08054', '#a65f3b', '#8b5e3c', '#d69a7f']
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, title: { display: true, text: 'Conversions' } }
+      }
+    }
+  });
+
+  // ROI by Channel Chart
+  new Chart(document.getElementById('roiChart').getContext('2d'), {
+    type: 'pie',
+    data: {
+      labels: ['Social Media', 'Email/CRM', 'Search', 'Push Notifications'],
+      datasets: [{
+        label: 'Projected ROI',
+        data: [1.8, 1.5, 0.9, 0.3],
+        backgroundColor: ['#c08054', '#a65f3b', '#d69a7f', '#f0b189']
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'bottom' } }
+    }
+  });
+});
+</script>

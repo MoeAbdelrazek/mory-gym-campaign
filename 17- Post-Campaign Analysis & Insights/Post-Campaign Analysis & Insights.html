@@ -1,0 +1,216 @@
+<section id="post-campaign-analysis">
+  <h2 class="section-title">Post-Campaign Analysis & Insights</h2>
+  <p class="section-intro">
+    A comprehensive review of campaign outcomes, highlighting performance versus targets, key lessons, successes, failures, and actionable recommendations for future campaigns.
+  </p>
+
+  <!-- Performance Highlights Cards -->
+  <div class="post-analysis-cards">
+    <div class="analysis-card">
+      <div class="card-header success">
+        <h3>Performance Highlights</h3>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li><strong>Total Reach:</strong> 80,800 users (+5% vs target)</li>
+          <li><strong>Engagement Rate:</strong> 11.3% (exceeded target)</li>
+          <li><strong>Loyalty Sign-ups:</strong> 1,070 members (+7% vs goal)</li>
+          <li><strong>ROAS:</strong> 4.11 : 1 (optimal budget allocation)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="analysis-card">
+      <div class="card-header lessons">
+        <h3>Lessons Learned</h3>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li>High-value audiences responded strongly to personalized messaging and urgency cues.</li>
+          <li>UGC and social proof significantly boosted engagement and retention.</li>
+          <li>Email cadence of 2–3 follow-ups balanced engagement with fatigue.</li>
+          <li>Dynamic creative adaptation improved paid media performance and CTR.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="analysis-card">
+      <div class="card-header insights">
+        <h3>Key Successes & Failures</h3>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li><strong>Success:</strong> Retargeting warm audiences boosted conversions by +1.2 %</li>
+          <li><strong>Success:</strong> Seasonal visuals outperformed default hero imagery</li>
+          <li><strong>Failure:</strong> Cart-abandonment emails had below-expected CTR (3.2 %)</li>
+          <li><strong>Failure:</strong> Carousel CTAs without urgency language underperformed</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="analysis-card">
+      <div class="card-header recommendations">
+        <h3>Recommendations</h3>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li>Continue A/B testing hero imagery, CTAs, and email subject lines.</li>
+          <li>Increase personalization in dynamic ads for higher-LTV users.</li>
+          <li>Refine cart-abandonment sequence with stronger urgency triggers.</li>
+          <li>Leverage top-performing seasonal visuals in upcoming campaigns.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts Section -->
+  <div class="post-charts">
+    <div class="chart-card">
+      <h4>Performance vs Targets</h4>
+      <canvas id="performanceTargets" height="120"></canvas>
+    </div>
+    <div class="chart-card">
+      <h4>Key Metrics Distribution</h4>
+      <canvas id="keyMetricsDist" height="120"></canvas>
+    </div>
+  </div>
+</section>
+
+<style>
+/* === Post-Campaign Analysis (Refined Latte Style) === */
+#post-campaign-analysis {
+  font-family: 'Times New Roman', serif;
+  color: #5a3e36;
+  background: linear-gradient(145deg, #fdf5ed, #fceedd);
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin: 80px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #5a3e36;
+  margin-bottom: 25px;
+  letter-spacing: 0.4px;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 20px;
+  color: #7a5542;
+  margin-bottom: 45px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Cards */
+.post-analysis-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.analysis-card {
+  background: #fffaf6;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.analysis-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(90, 62, 54, 0.2);
+}
+
+.card-header {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-header.success { background: #a65f3b; }
+.card-header.lessons { background: #c08054; }
+.card-header.insights { background: #8b5e3c; }
+.card-header.recommendations { background: #d69a7f; color: #4a3024; }
+
+.card-content {
+  padding: 22px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.card-content ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+
+/* Charts */
+.post-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.chart-card {
+  background: #fffaf5;
+  border: 1px solid #e2c9b7;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  text-align: center;
+}
+
+.chart-card h4 {
+  color: #5a3e36;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // === Performance vs Targets Chart ===
+  new Chart(document.getElementById('performanceTargets').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: ['Reach', 'Engagement', 'Sign-ups', 'ROAS', 'Conversion Rate'],
+      datasets: [
+        { label: 'Target', data: [77000, 10, 1000, 3.5, 5], backgroundColor: '#d69a7f' },
+        { label: 'Actual', data: [80800, 11.3, 1070, 4.11, 6.2], backgroundColor: '#a65f3b' }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'bottom' } },
+      scales: { y: { beginAtZero: true, title: { display: true, text: 'Performance Metrics' } } }
+    }
+  });
+
+  // === Key Metrics Distribution Chart ===
+  new Chart(document.getElementById('keyMetricsDist').getContext('2d'), {
+    type: 'pie',
+    data: {
+      labels: ['Reach', 'Engagement', 'Sign-ups', 'ROAS', 'Conversion'],
+      datasets: [{
+        label: 'Metrics',
+        data: [80800, 11.3, 1070, 4.11, 6.2],
+        backgroundColor: ['#c08054', '#a65f3b', '#8b5e3c', '#d69a7f', '#f0b189']
+      }]
+    },
+    options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+  });
+});
+</script>

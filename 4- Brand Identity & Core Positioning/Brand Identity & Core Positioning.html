@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haksoss Café Brand Identity & Core Positioning</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(145deg, #fdf5ed, #fceedd);
+      margin: 0;
+      padding: 0;
+      color: #5a3e36;
+      line-height: 1.8;
+    }
+
+    #brand-identity {
+      background: linear-gradient(145deg, #fdf5ed, #fceedd);
+      border-radius: 20px;
+      padding: 60px 40px;
+      margin: 70px auto;
+      max-width: 1200px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .brand-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Typography */
+    .section-title {
+      font-size: 32px;
+      text-align: center;
+      color: #5a3e36;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .section-intro {
+      font-size: 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+    }
+
+    /* Cards Layout */
+    .brand-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .brand-card {
+      background-color: #e6c9aa;
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .brand-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .brand-card h3 {
+      font-size: 22px;
+      color: #5a3e36;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .brand-card p,
+    .brand-card li {
+      font-size: 18px;
+      color: #5a3e36;
+      line-height: 1.8;
+    }
+
+    .brand-card ul {
+      padding-left: 22px;
+      margin: 0;
+    }
+
+    /* Core Positioning */
+    .core-positioning {
+      margin-top: 60px;
+      background-color: #e7d3b8;
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .core-positioning h3 {
+      font-size: 22px;
+      color: #5a3e36;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .core-positioning p {
+      font-size: 18px;
+      color: #5a3e36;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* Flow Diagram */
+    .brand-flow {
+      margin-top: 70px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .brand-diagram-block {
+      background-color: #e6c9aa;
+      border-radius: 20px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 1 1 200px;
+    }
+
+    .brand-diagram-block:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    .brand-diagram-block h4 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .brand-diagram-block p {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .brand-arrow {
+      font-size: 28px;
+      color: #5a3e36;
+      transition: transform 0.3s ease;
+    }
+
+    .brand-arrow:hover {
+      transform: scale(1.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #brand-identity {
+        padding: 40px 20px;
+        margin: 40px 15px;
+      }
+      .section-title { font-size: 26px; }
+      .section-intro { font-size: 18px; }
+      .brand-card h3, .core-positioning h3, .brand-diagram-block h4 { font-size: 20px; }
+      .brand-card p, .brand-card li, .core-positioning p, .brand-diagram-block p { font-size: 16px; }
+      .brand-flow { gap: 25px; }
+      .brand-arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="brand-identity">
+    <div class="brand-container">
+
+      <!-- Section Header -->
+      <h2 class="section-title">Brand Identity & Core Positioning</h2>
+      <p class="section-intro">
+        Defining the essence of Haksoss Café: positioning it as Alexandria’s ultimate luxury morning destination and creating a memorable, premium experience for loyal customers.
+      </p>
+
+      <!-- Core Identity Cards -->
+      <div class="brand-cards">
+        <div class="brand-card">
+          <h3>Brand Vision</h3>
+          <p>To be the premier luxury morning destination in Alexandria, offering curated experiences and memorable moments for every visitor.</p>
+        </div>
+
+        <div class="brand-card">
+          <h3>Brand Mission</h3>
+          <p>Deliver premium quality coffee, seasonal delights, and VIP loyalty programs that create unforgettable morning rituals.</p>
+        </div>
+
+        <div class="brand-card">
+          <h3>Brand Values</h3>
+          <ul>
+            <li>Luxury & Exclusivity</li>
+            <li>Consistency & Quality</li>
+            <li>Customer-Centric Experience</li>
+            <li>Innovation & Creativity</li>
+            <li>Community Engagement</li>
+          </ul>
+        </div>
+
+        <div class="brand-card">
+          <h3>Brand Personality</h3>
+          <p>Elegant, warm, and approachable; a sophisticated yet friendly environment where mornings feel exclusive and memorable.</p>
+        </div>
+      </div>
+
+      <!-- Core Positioning Statement -->
+      <div class="core-positioning">
+        <h3>Core Positioning Statement</h3>
+        <p>
+          "Haksoss Café is Alexandria’s ultimate luxury morning destination, offering curated experiences, exceptional quality, and exclusive VIP loyalty programs that transform an ordinary morning into an extraordinary ritual."
+        </p>
+      </div>
+
+      <!-- Brand Flow Diagram -->
+      <div class="brand-flow">
+        <div class="brand-diagram-block">
+          <h4>Brand Identity</h4>
+          <p>Vision, Mission, Values, Personality</p>
+        </div>
+
+        <div class="brand-arrow">→</div>
+
+        <div class="brand-diagram-block">
+          <h4>Core Positioning</h4>
+          <p>Luxury Morning Destination, Exclusive Loyalty</p>
+        </div>
+
+        <div class="brand-arrow">→</div>
+
+        <div class="brand-diagram-block">
+          <h4>Customer Experience</h4>
+          <p>Premium Offers, VIP Loyalty, Memorable Mornings</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

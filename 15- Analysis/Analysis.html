@@ -1,0 +1,276 @@
+<section id="campaign-analysis">
+  <h2 class="section-title">Comprehensive Campaign Analysis & A/B Testing Results</h2>
+  <p class="section-intro">
+    An in-depth performance breakdown of Haksoss Café’s digital marketing campaign, featuring data visualization across channels, ROI impact, audience behavior, and A/B testing outcomes.
+  </p>
+
+  <!-- Summary Metrics -->
+  <div class="metrics-summary">
+    <div class="metric-box">
+      <h3>Overall ROI</h3>
+      <p>+311%</p>
+    </div>
+    <div class="metric-box">
+      <h3>Average CTR</h3>
+      <p>6.2%</p>
+    </div>
+    <div class="metric-box">
+      <h3>Conversion Rate</h3>
+      <p>5.8%</p>
+    </div>
+    <div class="metric-box">
+      <h3>Engagement Rate</h3>
+      <p>11.3%</p>
+    </div>
+  </div>
+
+  <!-- Performance Charts -->
+  <div class="analysis-charts">
+    <div class="chart-card">
+      <h4>Channel Performance Overview</h4>
+      <canvas id="channelPerformance" height="130"></canvas>
+    </div>
+    <div class="chart-card">
+      <h4>Audience Behavior Insights</h4>
+      <canvas id="audienceBehavior" height="130"></canvas>
+    </div>
+  </div>
+
+  <!-- Conversion Funnel -->
+  <div class="chart-card wide">
+    <h4>Conversion Funnel Breakdown</h4>
+    <canvas id="conversionFunnel" height="150"></canvas>
+  </div>
+
+  <!-- A/B Testing Section -->
+  <div class="ab-testing">
+    <h3 class="subheading">A/B Testing Results Summary</h3>
+    <p>
+      Multiple A/B tests were conducted on creatives, subject lines, and CTAs to optimize engagement and conversions. Insights below highlight performance variations and winning combinations.
+    </p>
+
+    <div class="ab-cards">
+      <div class="ab-card">
+        <h4>Email Subject Line Test</h4>
+        <ul>
+          <li><strong>Variant A:</strong> "Wake Up to the Hero Latte" — 24% open rate</li>
+          <li><strong>Variant B:</strong> "Your Morning Ritual Awaits ☕" — <span class="highlight">27.8% open rate (Winner)</span></li>
+        </ul>
+      </div>
+
+      <div class="ab-card">
+        <h4>Ad Creative Test</h4>
+        <ul>
+          <li><strong>Variant A:</strong> Hero Image + Static Text — 5.1% CTR</li>
+          <li><strong>Variant B:</strong> Animated Latte Pour + CTA "Sip the Legend" — <span class="highlight">6.7% CTR (Winner)</span></li>
+        </ul>
+      </div>
+
+      <div class="ab-card">
+        <h4>CTA Language Test</h4>
+        <ul>
+          <li><strong>Variant A:</strong> “Order Now” — 4.9% Conversion</li>
+          <li><strong>Variant B:</strong> “Join the Ritual” — <span class="highlight">5.8% Conversion (Winner)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- AB Test Visualization -->
+    <div class="chart-card">
+      <h4>A/B Test Performance Comparison</h4>
+      <canvas id="abTestResults" height="130"></canvas>
+    </div>
+  </div>
+
+  <!-- Performance Radar -->
+  <div class="chart-card wide">
+    <h4>Performance Balance Radar</h4>
+    <canvas id="performanceRadar" height="150"></canvas>
+  </div>
+</section>
+
+<style>
+#campaign-analysis {
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin: 70px auto;
+  background: linear-gradient(145deg, #fdf5ed, #fceedd);
+  max-width: 1250px;
+  font-family: 'Times New Roman', serif;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  color: #5a3e36;
+}
+
+#campaign-analysis .section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #5a3e36;
+  margin-bottom: 20px;
+}
+#campaign-analysis .section-intro {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px;
+  color: #5a3e36;
+}
+
+.metrics-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+.metric-box {
+  background: #d6bfa3;
+  border-radius: 20px;
+  padding: 25px 35px;
+  text-align: center;
+  min-width: 180px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.metric-box h3 {
+  font-size: 22px;
+  color: #5a3e36;
+  margin-bottom: 8px;
+}
+.metric-box p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #8b5e3c;
+}
+
+.analysis-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.chart-card {
+  background: #f9ede3;
+  border: 1px solid #d6bfa3;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.chart-card h4 {
+  color: #8b5e3c;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.chart-card.wide { margin: 40px auto; }
+
+.ab-testing {
+  margin-top: 60px;
+}
+.ab-testing .subheading {
+  font-size: 26px;
+  color: #5a3e36;
+  margin-bottom: 15px;
+}
+.ab-testing p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #5a3e36;
+}
+
+.ab-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+.ab-card {
+  background: #d6bfa3;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.ab-card h4 {
+  color: #5a3e36;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.ab-card ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+.highlight {
+  color: #a65f3b;
+  font-weight: bold;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Channel Performance Bar Chart
+  new Chart(document.getElementById("channelPerformance").getContext("2d"), {
+    type: "bar",
+    data: {
+      labels: ["Instagram", "Facebook", "Google Ads", "Email", "TikTok"],
+      datasets: [{
+        label: "Engagement Rate (%)",
+        data: [13.2, 10.4, 8.7, 6.9, 11.1],
+        backgroundColor: ["#a65f3b", "#c08054", "#8b5e3c", "#d69a7f", "#f0b189"]
+      }]
+    },
+    options: { responsive: true, plugins: { legend: { position: "bottom" }}, scales: { y: { beginAtZero: true } } }
+  });
+
+  // Audience Behavior Line Chart
+  new Chart(document.getElementById("audienceBehavior").getContext("2d"), {
+    type: "line",
+    data: {
+      labels: ["Week 1","Week 2","Week 3","Week 4","Week 5"],
+      datasets: [
+        { label: "Returning Visitors", data: [1200, 1550, 1780, 1980, 2200], borderColor: "#a65f3b", fill: false, tension: 0.4 },
+        { label: "New Visitors", data: [900, 1150, 1280, 1400, 1600], borderColor: "#d69a7f", fill: false, tension: 0.4 }
+      ]
+    },
+    options: { responsive: true, plugins: { legend: { position: "bottom" } } }
+  });
+
+  // Conversion Funnel Bar Chart
+  new Chart(document.getElementById("conversionFunnel").getContext("2d"), {
+    type: "bar",
+    data: {
+      labels: ["Impressions", "Clicks", "Landing Visits", "Add to Cart", "Purchases"],
+      datasets: [{
+        label: "Users",
+        data: [80800, 5600, 4200, 1800, 1070],
+        backgroundColor: "#a65f3b"
+      }]
+    },
+    options: { responsive: true, plugins: { legend: { display: false }}, scales: { y: { beginAtZero: true } } }
+  });
+
+  // A/B Test Comparison Chart
+  new Chart(document.getElementById("abTestResults").getContext("2d"), {
+    type: "bar",
+    data: {
+      labels: ["Subject Line", "Ad Creative", "CTA Language"],
+      datasets: [
+        { label: "Variant A", data: [24, 5.1, 4.9], backgroundColor: "#d69a7f" },
+        { label: "Variant B", data: [27.8, 6.7, 5.8], backgroundColor: "#a65f3b" }
+      ]
+    },
+    options: { responsive: true, plugins: { legend: { position: "bottom" }}, scales: { y: { beginAtZero: true, title:{ display:true, text:"Performance (%)"} } } }
+  });
+
+  // Performance Radar Chart
+  new Chart(document.getElementById("performanceRadar").getContext("2d"), {
+    type: "radar",
+    data: {
+      labels: ["Engagement", "Reach", "Conversion", "CTR", "ROAS", "Retention"],
+      datasets: [
+        { label: "Target", data: [10, 77000, 5, 5, 3.5, 60], borderColor: "#d69a7f", backgroundColor: "rgba(214,154,127,0.2)" },
+        { label: "Actual", data: [11.3, 80800, 5.8, 6.2, 4.11, 68], borderColor: "#a65f3b", backgroundColor: "rgba(166,95,59,0.3)" }
+      ]
+    },
+    options: { responsive: true, plugins: { legend: { position: "bottom" } } }
+  });
+});
+</script>
+

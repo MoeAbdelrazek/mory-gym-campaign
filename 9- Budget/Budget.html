@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haksoss Café Budget & ROI Summary</title>
+  <style>
+    body {
+      font-family:'Times New Roman',serif;
+      background: linear-gradient(145deg,#fdf5ed,#fceedd);
+      margin:0;
+      padding:0;
+      color:#5a3e36;
+      line-height:1.8;
+    }
+    #budget-flighting {
+      padding:60px 20px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    #budget-flighting h2 {
+      font-size:32px;
+      text-align:center;
+      margin-bottom:25px;
+    }
+    #budget-flighting p {
+      font-size:20px;
+      text-align:center;
+      max-width:900px;
+      margin:0 auto 50px;
+    }
+    .budget-card {
+      flex:1 1 280px;
+      background:#e6c9aa;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+      font-size:18px;
+      line-height:1.7;
+    }
+    .budget-card h3 {
+      font-size:22px;
+      margin-bottom:15px;
+      color:#3c2b24;
+    }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      font-size:18px;
+      text-align:left;
+      color:#5a3e36;
+    }
+    th, td {
+      padding:12px;
+      border:1px solid #fdf5ed;
+    }
+    th {
+      background-color:#fdf5ed;
+      color:#5a3e36;
+    }
+    tbody tr:nth-child(even) { background-color:#fceedd; }
+    tbody tr:nth-child(odd) { background-color:#fdf5ed; }
+    @media(max-width:768px){
+      .budget-card { flex:1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<section id="budget-flighting">
+  <h2>Budget Allocation, Flighting & ROI Summary</h2>
+  <p>
+    Optimized spend across channels with a structured 90-day campaign funnel, showing financial efficiency, ROAS per channel, and projected customer lifetime value.
+  </p>
+
+  <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center; margin-bottom:50px;">
+    <div class="budget-card">
+      <h3>Budget Allocation</h3>
+      <ul>
+        <li>Instagram & TikTok Ads: $8,500</li>
+        <li>Google Search & Display: $7,000</li>
+        <li>Email Campaigns: $3,500</li>
+        <li>Landing Pages & Retargeting: $4,000</li>
+        <li>Influencer Collaborations: $2,000</li>
+      </ul>
+    </div>
+
+    <div class="budget-card">
+      <h3>Spend vs Revenue</h3>
+      <ul>
+        <li>Total Spend: $25,000</li>
+        <li>Total Revenue: $102,750</li>
+        <li>ROI Overall: 4.11:1</li>
+        <li>Instagram Ads ROI: 4.5:1</li>
+        <li>Email Campaign ROI: 3.8:1</li>
+      </ul>
+    </div>
+
+    <div class="budget-card">
+      <h3>Lifetime Value (LTV)</h3>
+      <ul>
+        <li>Average Customer LTV: $180</li>
+        <li>Loyalty Program Members: 1,070</li>
+        <li>Projected Total Revenue from LTV: $192,600</li>
+        <li>Retention Rate: 15%</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="max-width:900px; margin:0 auto 60px; background:#e6c9aa; padding:30px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.15);">
+    <h3 style="font-size:22px; text-align:center; margin-bottom:20px;">Forecast vs Actual Performance</h3>
+    <canvas id="forecastChart" width="800" height="300"></canvas>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:25px; justify-content:center; align-items:flex-start;">
+    <div style="flex:1 1 400px; background:#e6c9aa; padding:30px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.15);">
+      <h3 style="font-size:22px; text-align:center; margin-bottom:20px;">ROI Breakdown</h3>
+      <canvas id="roiChannelChart" width="400" height="250"></canvas>
+    </div>
+
+    <div style="flex:1 1 400px; background:#e6c9aa; padding:30px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.15);">
+      <h3 style="font-size:22px; text-align:center; margin-bottom:20px;">Key Financial Metrics</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Total Spend</td><td>$25,000</td></tr>
+          <tr><td>Total Revenue</td><td>$102,750</td></tr>
+          <tr><td>ROAS Overall</td><td>4.11:1</td></tr>
+          <tr><td>Avg LTV</td><td>$180</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  function latteGradient(ctx){
+    const gradient = ctx.createLinearGradient(0,0,0,300);
+    gradient.addColorStop(0,'#fdf5ed');
+    gradient.addColorStop(1,'#e6c9aa');
+    return gradient;
+  }
+
+  const ctxForecast = document.getElementById('forecastChart').getContext('2d');
+  new Chart(ctxForecast, {
+    type:'bar',
+    data:{
+      labels:['Reach','Sign-ups','Conversion %','Revenue'],
+      datasets:[
+        { label:'Forecast', data:[75000,1000,6,100000], backgroundColor: latteGradient(ctxForecast), borderColor:'#5a3e36', borderWidth:2 },
+        { label:'Actual', data:[80800,1070,6.2,102750], backgroundColor:'#d8bfa3', borderColor:'#5a3e36', borderWidth:2 }
+      ]
+    },
+    options:{
+      responsive:true,
+      scales:{
+        y:{ beginAtZero:true, ticks:{ color:'#5a3e36', font:{size:14} } },
+        x:{ ticks:{ color:'#5a3e36', font:{size:14} } }
+      },
+      plugins:{
+        legend:{ labels:{ color:'#5a3e36', font:{size:16} } },
+        tooltip:{ backgroundColor:'#fdf5ed', titleColor:'#5a3e36', bodyColor:'#5a3e36' }
+      },
+      animation:{ duration:1500, easing:'easeOutQuart' }
+    }
+  });
+
+  const ctxROIChannel = document.getElementById('roiChannelChart').getContext('2d');
+  new Chart(ctxROIChannel, {
+    type:'doughnut',
+    data:{
+      labels:['Instagram/TikTok','Google Ads','Email','Landing Pages','Influencers'],
+      datasets:[{
+        data:[4.5,3.9,3.8,4.0,4.2],
+        backgroundColor:['#fdf5ed','#e6c9aa','#fceedd','#d8bfa3','#fdf5ed'],
+        borderColor:'#5a3e36',
+        borderWidth:2
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{ position:'bottom', labels:{ color:'#5a3e36', font:{size:16} } },
+        tooltip:{ backgroundColor:'#fdf5ed', titleColor:'#5a3e36', bodyColor:'#5a3e36' }
+      },
+      animation:{ animateScale:true, duration:1600, easing:'easeInOutQuart' }
+    }
+  });
+</script>
+
+</body>
+</html>

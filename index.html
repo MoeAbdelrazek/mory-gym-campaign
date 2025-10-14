@@ -1,0 +1,3136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mory Gym — Full Case Study</title>
+<meta name="description" content="Mory Gym Campaign: 4,780% ROI, 1800 Membership Sign-ups, 18.2% Avg Engagement Rate.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+    --bg:#1a1a1a;
+    --card:#222;
+    --accent:#bfa15d;
+    --white-muted:#e6e6e6;
+    --card-shadow:0 10px 25px rgba(0,0,0,0.3),0 0 0 1px rgba(191,161,93,0.1);
+    --radius:16px;
+    --maxw:1200px;
+}
+
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:"Times New Roman", serif;
+    color:var(--accent);
+    background: var(--bg);
+    background-image: 
+        linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
+        url('3_Assets/Images/mory-gym-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity:0;
+    animation: bodyFadeIn 900ms ease forwards;
+}
+@keyframes bodyFadeIn{ to {opacity:1;} }
+
+a{color:var(--accent); text-decoration:none; transition:.3s;}
+a:hover{color:#d6c17b;}
+
+.page{
+    padding-top:100px;
+    max-width:var(--maxw);
+    margin:0 auto;
+    text-align:center;
+}
+
+header.fixed-header{
+    position:fixed; top:0; left:0; right:0; z-index:9999;
+    background:linear-gradient(90deg, rgba(28,28,28,0.95), rgba(40,40,40,0.85));
+    color:var(--accent);
+    box-shadow:0 6px 20px rgba(0,0,0,0.5);
+    border-bottom: 2px solid rgba(191,161,93,0.2);
+    backdrop-filter: blur(6px);
+    text-align:center;
+}
+.header-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 20px;
+    gap:10px;
+}
+.brand{ display:flex; align-items:center; gap:10px; }
+.brand img{
+    width:55px; height:55px; object-fit:cover;
+    border-radius:12px;
+    background:#fff; padding:3px;
+    border:2px solid var(--accent);
+    box-shadow:0 0 10px rgba(191,161,93,0.7);
+    transition:transform 0.4s ease;
+}
+.brand img:hover{ transform:rotate(-4deg) scale(1.04); }
+.site-title{
+    margin:0;
+    font-family:'Playfair Display', serif;
+    font-size:1.25rem; 
+    color:var(--accent);
+    letter-spacing:1px;
+}
+
+.case-hero{
+    display:flex; 
+    gap:24px; 
+    align-items:center;
+    flex-wrap:wrap; 
+    margin-top:15px;
+    animation: fadeUp 1.2s ease forwards;
+    background: rgba(17,17,17,0.9);
+    padding:24px 20px;
+    border-radius:var(--radius);
+    box-shadow:0 10px 28px rgba(0,0,0,0.25);
+    text-align:center;
+}
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.case-left{ 
+    flex:1; 
+    min-width:300px; 
+    text-align:center; 
+}
+.case-left h2{
+    font-size:1.65rem; 
+    margin:0 0 10px;
+    font-family:'Playfair Display', serif;
+    color:var(--white-muted); 
+    border-bottom:3px double var(--accent);
+    padding-bottom:5px;
+    display:flex; 
+    align-items:center; 
+    gap:8px;
+    justify-content:center;
+}
+.case-left p.sub{
+    font-size:1.05rem; 
+    color:var(--accent); 
+    line-height:1.5;
+    margin:8px 0 12px;
+}
+
+.exec-summary{
+    margin-top:15px;
+    font-size:1.05rem;
+    line-height:1.5;
+    color:var(--accent); 
+    padding:15px;
+    background:rgba(34,34,34,0.9);
+    border-left:4px solid var(--accent);
+    border-radius:12px;
+    box-shadow:0 5px 16px rgba(0,0,0,0.2);
+}
+.exec-summary h3{
+    color:var(--white-muted); 
+    font-family:'Playfair Display', serif;
+    margin-bottom:10px;
+    font-size:1.2rem;
+}
+
+.quick-stats{
+    display:flex; 
+    flex-wrap:wrap;
+    gap:14px; 
+    margin:16px 0;
+    justify-content:center;
+}
+.stat{
+    background:linear-gradient(135deg,#222, #333);
+    padding:12px 16px;
+    border-radius:14px;
+    min-width:110px;
+    box-shadow:0 6px 16px rgba(0,0,0,0.3);
+    border:1px solid rgba(191,161,93,0.2);
+    text-align:center;
+    display:flex; 
+    flex-direction:column;
+    align-items:center; 
+    justify-content:center;
+    gap:4px;
+}
+.stat .val{ color:var(--accent); font-weight:900; font-size:1.2rem;}
+.stat .lab{ color:var(--accent); font-weight:700; font-size:1rem; margin-bottom:4px; }
+.stat-bar{ width:80%; height:6px; background:#333; border-radius:3px; overflow:hidden; }
+.stat-bar-inner{ height:100%; background:var(--accent); border-radius:3px; width:0%; animation: fillBar 1.5s forwards; }
+@keyframes fillBar{ to{width: var(--fill);} }
+
+.case-right{ 
+    flex:1; 
+    max-width:280px; 
+    position:relative; 
+    text-align:center;
+}
+.case-right img{
+    width:100%;
+    border-radius:var(--radius);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.5s ease;
+}
+.case-right img:hover{ transform: translateY(-5px) scale(1.02); }
+
+.panel {
+    border: 5px solid rgba(191,161,93,0.4);
+    border-radius: 22px;
+    padding: 32px 26px;
+    box-shadow: var(--card-shadow);
+    background: rgba(28,28,28,0.9);
+    margin: 36px auto;
+    max-width: var(--maxw);
+}
+
+@media(max-width:768px){
+    .case-hero{ flex-direction:column; align-items:center; padding:22px 18px; }
+    .case-right{ max-width:100%; margin-top:12px; }
+    .quick-stats{ justify-content:center; }
+    .stat{ min-width:90px; font-size:1rem; padding:10px 12px; }
+    .case-left h2{ font-size:1.45rem; } 
+    .case-left p.sub, .exec-summary{ font-size:1rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="fixed-header" role="banner">
+    <div class="header-inner">
+        <div class="brand">
+            <img src="3_Assets/Logo/logo.png" alt="Mory Gym Logo">
+            <h1 class="site-title">Mory Gym — Fitness Elevated in Alexandria</h1>
+        </div>
+    </div>
+</header>
+
+<div class="page">
+
+<section id="case" class="panel inview">
+    <div class="case-hero">
+        <div class="case-left">
+            <h2>Mory Gym — Transform Your Fitness: Full Case Study</h2>
+            <p class="sub">
+                Campaign: <strong>“Strength & Health in Alexandria”</strong><br>
+                Premium gym membership, class enrollments, and social engagement boosted through data-driven strategy.
+            </p>
+
+            <div class="quick-stats">
+                <div class="stat">
+                    <div class="val">180,000</div>
+                    <div class="lab">Reach</div>
+                    <div class="stat-bar"><div class="stat-bar-inner" style="--fill:100%"></div></div>
+                </div>
+                <div class="stat">
+                    <div class="val">1,800</div>
+                    <div class="lab">New Members</div>
+                    <div class="stat-bar"><div class="stat-bar-inner" style="--fill:95%"></div></div>
+                </div>
+                <div class="stat">
+                    <div class="val">18.2%</div>
+                    <div class="lab">Engagement</div>
+                    <div class="stat-bar"><div class="stat-bar-inner" style="--fill:82%"></div></div>
+                </div>
+                <div class="stat">
+                    <div class="val">1,600,000 EGP</div>
+                    <div class="lab">Revenue</div>
+                    <div class="stat-bar"><div class="stat-bar-inner" style="--fill:90%"></div></div>
+                </div>
+                <div class="stat">
+                    <div class="val">4,780%</div>
+                    <div class="lab">ROI</div>
+                    <div class="stat-bar"><div class="stat-bar-inner" style="--fill:100%"></div></div>
+                </div>
+            </div>
+
+            <div class="exec-summary">
+                <h3>Executive Summary:</h3>
+                <p>This high-performance 12-week campaign targeted adults aged 18–50 (50% M / 50% F) with income 200K–500K+ EGP.
+                Through a combination of paid social, email marketing, and engaging classes, <strong>Mory Gym</strong> achieved <strong>1,800 new memberships</strong>, 
+                <strong>18.2% engagement</strong>, <strong>1,600,000 EGP revenue</strong>, and a <strong>4,780% ROI</strong>. Average membership value: 600 EGP.</p>
+            </div>
+        </div>
+
+        <div class="case-right">
+            <img src="3_Assets/Images/hero-gym.jpg" alt="Mory Gym Hero Image">
+        </div>
+    </div>
+</section>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<section id="campaign-intro" class="panel inview">
+  <h2 class="section-title">Campaign Introduction</h2>
+  <p class="section-intro">
+    The Mory Gym campaign was designed to position the gym as Alexandria’s premier fitness destination. 
+    The 12-week strategy focused on membership growth, class attendance, and digital engagement across key channels.
+  </p>
+
+  <div class="intro-cards">
+    <div class="intro-card">
+      <h3>Primary Objective</h3>
+      <p>Drive 500+ new memberships and increase weekly class attendance by 35% through targeted campaigns.</p>
+    </div>
+    <div class="intro-card">
+      <h3>Target Audience</h3>
+      <p>Adults 18–50 in Alexandria seeking fitness, wellness, and community-driven workouts (50% M / 50% F, 200K–500K+ EGP income).</p>
+    </div>
+    <div class="intro-card">
+      <h3>Key Channels</h3>
+      <p>Instagram & TikTok ads, Email automation, Google Search campaigns, and in-gym engagement challenges.</p>
+    </div>
+    <div class="intro-card">
+      <h3>Campaign Duration</h3>
+      <p>12-week program with weekly tracking and progressive engagement strategies.</p>
+    </div>
+  </div>
+
+  <div class="intro-data">
+    <div class="data-item">
+      <h4 class="data-title">New Memberships</h4>
+      <canvas id="membersChart" width="100" height="100"></canvas>
+      <div class="data-val">1,800</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Avg Engagement Rate</h4>
+      <canvas id="engagementChart" width="100" height="100"></canvas>
+      <div class="data-val">18.2%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Revenue</h4>
+      <canvas id="attendanceSpark" width="180" height="50"></canvas>
+      <div class="data-val">1,600,000 EGP</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">ROI</h4>
+      <canvas id="roiChart" width="100" height="100"></canvas>
+      <div class="data-val">4,780%</div>
+    </div>
+  </div>
+</section>
+
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const gold = '#bfa15d', dark = '#2a2a2a';
+
+  // New Members (1800 of 180,000 reach)
+  new Chart(document.getElementById('membersChart'), {
+    type: 'doughnut',
+    data: { 
+      labels: ['New Members', 'Remaining'], 
+      datasets: [{ 
+        data: [1800, 178200], 
+        backgroundColor: [gold, dark], 
+        borderWidth: 0 
+      }] 
+    },
+    options: { cutout: '72%', plugins: { legend: { display: false } }, animation: { duration: 1000 } }
+  });
+
+  // Engagement Rate (18.2%)
+  new Chart(document.getElementById('engagementChart'), {
+    type: 'doughnut',
+    data: { 
+      labels: ['Engagement', 'Remaining'], 
+      datasets: [{ 
+        data: [18.2, 81.8], 
+        backgroundColor: [gold, dark], 
+        borderWidth: 0 
+      }] 
+    },
+    options: { cutout: '72%', plugins: { legend: { display: false } }, animation: { duration: 1000 } }
+  });
+
+  // ROI (4,780%)
+  new Chart(document.getElementById('roiChart'), {
+    type: 'doughnut',
+    data: { 
+      labels: ['ROI', 'Remaining'], 
+      datasets: [{ 
+        data: [4780, 0], 
+        backgroundColor: [gold, dark], 
+        borderWidth: 0 
+      }] 
+    },
+    options: { cutout: '72%', plugins: { legend: { display: false } }, animation: { duration: 1000 } }
+  });
+
+  // Revenue Growth (mock sparkline)
+  new Chart(document.getElementById('attendanceSpark'), {
+    type: 'line',
+    data: {
+      labels: Array.from({length: 12}, (_, i) => `W${i+1}`),
+      datasets: [{
+        data: [80,120,200,260,350,450,600,780,950,1100,1350,1600],
+        borderColor: gold,
+        backgroundColor: 'rgba(191,161,93,0.1)',
+        fill: true, tension: 0.4, pointRadius: 0
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: { x: { display: false }, y: { display: false } },
+      elements: { line: { borderWidth: 2 } }
+    }
+  });
+</script>
+
+<style>
+#campaign-intro {
+  border-radius: 20px;
+  padding: 35px 26px;
+  margin: 40px auto;
+  background: #1c1c1c;
+  max-width: var(--maxw);
+  animation: fadeUp 1s ease forwards;
+  box-shadow: var(--card-shadow);
+}
+
+#campaign-intro .section-title {
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  color:#e6e6e6;
+  margin-bottom:16px;
+}
+
+#campaign-intro .section-intro {
+  text-align:center;
+  max-width: 800px;
+  margin: 0 auto 25px auto;
+  font-size:17px;
+  line-height:1.55;
+  color:#bfa15d;
+}
+
+#campaign-intro .intro-cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap:20px;
+  margin-top:25px;
+}
+
+#campaign-intro .intro-card {
+  background:#2a2a2a;
+  border-radius:18px;
+  padding:18px 14px;
+  box-shadow:0 5px 18px rgba(0,0,0,0.15);
+  text-align:center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#campaign-intro .intro-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+#campaign-intro .intro-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:19px;
+  color:#e6e6e6;
+  margin-bottom:8px;
+}
+
+#campaign-intro .intro-card p {
+  font-size:15.5px;
+  line-height:1.5;
+  color:#bfa15d;
+}
+
+#campaign-intro .intro-data {
+  margin-top:35px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap:26px;
+  text-align:center;
+}
+
+#campaign-intro .data-title {
+  font-family:'Playfair Display', serif;
+  font-size:17px;
+  color:#e6e6e6;
+  margin-bottom:5px;
+}
+
+#campaign-intro .data-val {
+  font-size:19px;
+  color:#bfa15d;
+  font-weight:700;
+  margin-top:6px;
+}
+
+@media(max-width:768px){
+  #campaign-intro {padding:28px 18px;}
+  #campaign-intro .section-title {font-size:22px;}
+  #campaign-intro .section-intro {font-size:15.5px;}
+  #campaign-intro .intro-card h3 {font-size:17px;}
+  #campaign-intro .intro-card p {font-size:14.5px;}
+}
+</style>
+
+
+
+
+
+
+
+
+<section id="market-analysis" class="panel inview">
+  <h2 class="section-title">Market & Competitive Analysis</h2>
+  <p class="section-intro">
+    Strategic overview of Alexandria's fitness market, highlighting growth trends, member behavior, and Mory Gym's competitive position.
+  </p>
+
+  <div class="market-insights">
+
+    <!-- Gym Market Growth -->
+    <div class="insight-card">
+      <h3>Egypt's Fitness Market Growth</h3>
+      <canvas id="fitnessGrowthChart" width="200" height="150"></canvas>
+      <div class="data-val">+8% CAGR (2023-2026)</div>
+    </div>
+
+    <!-- Specialty Programs Adoption -->
+    <div class="insight-card">
+      <h3>Adoption of Specialty Programs</h3>
+      <canvas id="specialtyChart" width="150" height="150"></canvas>
+      <div class="data-val">HIIT & Strength Classes: 62%</div>
+    </div>
+
+    <!-- Consumer Preferences -->
+    <div class="insight-card">
+      <h3>Member Preferences</h3>
+      <canvas id="preferencesSpark" width="200" height="60"></canvas>
+      <div class="data-val">Group Classes > Personal Training</div>
+    </div>
+
+  </div>
+
+  <div class="competitive-landscape">
+    <h3>Competitive Landscape</h3>
+    <canvas id="competitorChart" width="400" height="250"></canvas>
+    <p>
+      Mory Gym leads Alexandria in member satisfaction and retention, outperforming boutique studios and international chains through targeted programs, specialty classes, and community engagement.
+    </p>
+  </div>
+
+  <div class="strategic-positioning">
+    <h3>Mory Gym's Strategic Positioning</h3>
+    <p>
+      Positioned as Alexandria’s premium fitness destination, leveraging data-driven campaigns, wellness content, and specialty classes to capture 20% of the local high-engagement segment.
+    </p>
+  </div>
+</section>
+
+<!-- Charts.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Fitness Market Growth Bar Chart
+  new Chart(document.getElementById('fitnessGrowthChart'), {
+    type: 'bar',
+    data: {
+      labels: ['2023','2024','2025','2026'],
+      datasets:[{
+        label:'Membership Growth',
+        data:[1200, 1300, 1450, 1560],
+        backgroundColor:'#bfa15d',
+        borderRadius:10
+      }]
+    },
+    options:{plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}}}
+  });
+
+  // Specialty Programs Radial Chart
+  new Chart(document.getElementById('specialtyChart'), {
+    type:'doughnut',
+    data:{labels:['HIIT & Strength','Others'], datasets:[{data:[62,38], backgroundColor:['#bfa15d','#2a2a2a'], borderWidth:0}]},
+    options:{cutout:'70%', plugins:{legend:{display:false}}, animation:{animateRotate:true,duration:1200}}
+  });
+
+  // Consumer Preferences Sparkline
+  new Chart(document.getElementById('preferencesSpark'), {
+    type:'line',
+    data:{labels:['Week1','Week2','Week3','Week4','Week5','Week6','Week7','Week8'], datasets:[{data:[25,28,32,35,38,40,42,45], borderColor:'#bfa15d', backgroundColor:'rgba(191,161,93,0.1)', fill:true, tension:0.3, pointRadius:0}]},
+    options:{plugins:{legend:{display:false}}, scales:{x:{display:false},y:{display:false}}, elements:{line:{borderWidth:3}}}
+  });
+
+  // Competitor Comparison Chart (Horizontal Bar)
+  new Chart(document.getElementById('competitorChart'), {
+    type:'bar',
+    data:{
+      labels:['Mory Gym','FitStudio','Global Gym','Alpha Fitness'],
+      datasets:[{
+        label:'Member Satisfaction (%)',
+        data:[92,78,74,65],
+        backgroundColor:'#bfa15d',
+        borderRadius:12
+      }]
+    },
+    options:{indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true}}}
+  });
+</script>
+
+<style>
+#market-analysis {
+  border-radius:20px;
+  padding:40px 30px;
+  margin:40px auto;
+  background:#1c1c1c;
+  max-width:1200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  color:#bfa15d;
+  text-align:center;
+}
+
+#market-analysis .section-title {
+  font-family:'Playfair Display', serif;
+  font-size:28px;
+  color:#dcdcdc; /* muted white */
+  margin-bottom:18px;
+  border-bottom:2px solid #bfa15d;
+  padding-bottom:8px;
+}
+
+#market-analysis .section-intro {
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:30px;
+  color:#bfa15d;
+}
+
+#market-analysis .market-insights {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap:22px;
+  margin-bottom:30px;
+}
+
+#market-analysis .insight-card {
+  background:#2a2a2a;
+  border-radius:20px;
+  padding:22px 16px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#market-analysis .insight-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+#market-analysis .insight-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:#dcdcdc;
+  margin-bottom:10px;
+}
+
+#market-analysis .insight-card p, 
+#market-analysis .competitive-landscape p,
+#market-analysis .strategic-positioning p {
+  font-size:16px;
+  line-height:1.6;
+  color:#bfa15d;
+}
+
+#market-analysis .competitive-landscape h3,
+#market-analysis .strategic-positioning h3 {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:#dcdcdc;
+  margin-bottom:12px;
+}
+
+@media(max-width:768px){
+  #market-analysis{padding:30px 18px;}
+  #market-analysis .section-title{font-size:24px;}
+  #market-analysis .section-intro{font-size:16px;}
+  #market-analysis .insight-card h3{font-size:18px;}
+  #market-analysis .competitive-landscape h3,
+  #market-analysis .strategic-positioning h3{font-size:18px;}
+}
+</style>
+
+
+
+
+<section id="campaign-strategy" class="panel inview">
+  <h2 class="section-title">Campaign Strategy & Approach</h2>
+  <p class="section-intro">
+    A precise plan to drive awareness, engagement, memberships, and retention for Mory Gym, leveraging specialty programs, digital campaigns, and measurable KPIs.
+  </p>
+
+  <div class="strategy-cards">
+
+    <!-- Primary Objective -->
+    <div class="card">
+      <h3>Primary Objective</h3>
+      <p>Establish Mory Gym as Alexandria’s premium fitness destination while growing high-LTV membership base.</p>
+    </div>
+
+    <!-- Target Audience -->
+    <div class="card">
+      <h3>Target Audience</h3>
+      <p>Adults 18-50 in Alexandria seeking boutique, high-impact fitness programs, wellness content, and community engagement.</p>
+    </div>
+
+    <!-- Key Channels -->
+    <div class="card">
+      <h3>Key Channels</h3>
+      <p>Social Media (Instagram, TikTok, Meta), Email CRM, Local SEO, SEM, and live community fitness events.</p>
+    </div>
+
+    <!-- Core Tactics -->
+    <div class="card">
+      <h3>Core Tactics</h3>
+      <ul>
+        <li>High-impact visuals for signature classes (HIIT, Strength & Core)</li>
+        <li>8-step automated email flows for membership conversion & re-engagement</li>
+        <li>Targeted social campaigns with A/B testing</li>
+        <li>SEO & SEM campaigns targeting local intent searches</li>
+        <li>Retention through loyalty programs, VIP perks, and referrals</li>
+      </ul>
+    </div>
+
+    <!-- KPI Dashboard -->
+    <div class="card">
+      <h3>Key Metrics Dashboard</h3>
+      <canvas id="strategyDashboardChart" width="300" height="200"></canvas>
+      <p class="chart-caption">Dashboard: Reach, Engagement, New Members, Conversion, ROAS, Retention (%)</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('strategyDashboardChart').getContext('2d');
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Reach','Engagement','New Members','Conversion','ROAS','Retention'],
+        datasets: [{
+            label: 'Target',
+            data: [30000,15,450,7,130,18],
+            backgroundColor: '#bfa15d66',
+            borderRadius: 10
+        },{
+            label: 'Actual',
+            data: [25400,14.8,420,6,125,15],
+            backgroundColor: '#bfa15d',
+            borderRadius: 10
+        }]
+    },
+    options: {
+        responsive:true,
+        plugins: {
+            legend: {
+                labels: {
+                    color: '#dcdcdc',
+                    font: {size:16}
+                }
+            },
+            tooltip: {
+                titleFont: {size:18},
+                bodyFont: {size:16},
+                backgroundColor:'#2a2a2a',
+                titleColor:'#dcdcdc',
+                bodyColor:'#bfa15d'
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero:true,
+                title:{
+                    display:true,
+                    text:'Value',
+                    color:'#bfa15d',
+                    font:{size:16}
+                },
+                ticks:{color:'#bfa15d', font:{size:14}}
+            },
+            x: {
+                ticks:{color:'#bfa15d', font:{size:14}}
+            }
+        }
+    }
+});
+</script>
+
+<style>
+#campaign-strategy {
+  border-radius:20px;
+  padding:45px 35px;
+  margin:40px auto;
+  background:#1c1c1c;
+  max-width:1200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  color:#bfa15d;
+  text-align:center;
+}
+
+#campaign-strategy .section-title {
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  color:#dcdcdc; /* muted white */
+  margin-bottom:18px;
+  border-bottom:2px solid #bfa15d;
+  padding-bottom:8px;
+}
+
+#campaign-strategy .section-intro {
+  font-size:20px;
+  line-height:1.7;
+  margin-bottom:35px;
+  color:#bfa15d;
+}
+
+.strategy-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+.strategy-cards .card {
+  background:#2a2a2a;
+  border-radius:20px;
+  padding:26px 20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.strategy-cards .card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.strategy-cards h3 {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:#dcdcdc; /* muted white */
+  margin-bottom:12px;
+}
+
+.strategy-cards p, 
+.strategy-cards li {
+  font-size:18px;
+  line-height:1.7;
+  color:#bfa15d;
+  text-align:center;
+}
+
+.strategy-cards ul {padding-left:22px;margin:0;text-align:left;}
+
+.chart-caption {
+  font-size:16px;
+  color:#bfa15d;
+  margin-top:8px;
+}
+
+@media(max-width:768px){
+  #campaign-strategy{padding:35px 18px;}
+  #campaign-strategy .section-title{font-size:22px;}
+  #campaign-strategy .section-intro{font-size:18px;}
+  .strategy-cards .card{padding:22px 16px;}
+  .strategy-cards h3{font-size:18px;}
+  .strategy-cards p, .strategy-cards li{font-size:16px;}
+  .chart-caption{font-size:14px;}
+}
+</style>
+
+
+
+
+<section id="brand-identity" class="panel inview">
+
+  <!-- Section Header -->
+  <h2 class="section-title">Brand Identity & Core Positioning</h2>
+  <p class="section-intro">
+    Defining the essence of Mory Gym: positioning it as Alexandria’s premier fitness destination and creating a high-performance experience for members.
+  </p>
+
+  <!-- Core Identity Cards -->
+  <div class="intro-cards">
+    <div class="intro-card">
+      <h3>Brand Vision</h3>
+      <p>To be Alexandria’s top fitness destination, offering curated programs, innovative classes, and elite training experiences for every member.</p>
+    </div>
+
+    <div class="intro-card">
+      <h3>Brand Mission</h3>
+      <p>Deliver premium training programs, personalized coaching, and community-driven wellness events that create transformative fitness journeys.</p>
+    </div>
+
+    <div class="intro-card">
+      <h3>Brand Values</h3>
+      <ul>
+        <li>Excellence & Performance</li>
+        <li>Consistency & Progress</li>
+        <li>Member-Centric Experience</li>
+        <li>Innovation & Modernity</li>
+        <li>Community & Engagement</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Brand Personality</h3>
+      <p>Professional, approachable, and inspiring; fostering a high-energy environment where every member feels motivated and supported.</p>
+    </div>
+  </div>
+
+  <!-- Key Campaign Numbers -->
+  <div class="intro-data" style="margin-top:40px; display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:30px; text-align:center;">
+    <div class="data-item">
+      <h4 class="data-title">New Memberships</h4>
+      <div class="data-val">1800</div>
+    </div>
+
+    <div class="data-item">
+      <h4 class="data-title">Avg Engagement</h4>
+      <div class="data-val">18.2%</div>
+    </div>
+
+    <div class="data-item">
+      <h4 class="data-title">ROI</h4>
+      <div class="data-val">4,780%</div>
+    </div>
+  </div>
+
+  <!-- Core Positioning Statement -->
+  <div class="core-positioning">
+    <h3>Core Positioning Statement</h3>
+    <p>
+      "Mory Gym is Alexandria’s ultimate fitness destination, offering elite training programs, personalized coaching, and community-focused events that transform every workout into an exceptional experience."
+    </p>
+  </div>
+
+</section>
+
+<style>
+#brand-identity {
+  border: 6px solid rgba(191,161,93,0.4); /* thick faded gold border */
+  border-radius: 24px;
+  padding: 40px 35px;
+  margin: 40px auto;
+  background:#1c1c1c;
+  max-width:1200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  color:#bfa15d;
+  text-align:center;
+}
+
+.intro-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.intro-card {
+  background:#2a2a2a;
+  border-radius:20px;
+  padding:26px 20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.intro-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.intro-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:#bfa15d;
+  margin-bottom:12px;
+}
+
+.intro-card p, .intro-card li {
+  font-size:18px;
+  line-height:1.7;
+  color:#bfa15d;
+  text-align:center;
+}
+
+.intro-card ul {padding-left:22px; margin:0; text-align:left;}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:28px;
+  color:#bfa15d;
+  margin-bottom:18px;
+  border-bottom:2px solid #bfa15d;
+  padding-bottom:8px;
+}
+
+.section-intro {
+  font-size:20px;
+  line-height:1.7;
+  margin-bottom:35px;
+  color:#bfa15d;
+}
+
+.intro-data {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+  margin-top:40px;
+  text-align:center;
+}
+
+.data-item h4.data-title {
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  color:#bfa15d;
+  margin-bottom:8px;
+}
+
+.data-item .data-val {
+  font-size:20px;
+  font-weight:700;
+  color:#bfa15d;
+}
+
+.core-positioning {
+  margin-top:50px;
+  background:#2a2a2a;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+}
+
+.core-positioning h3 {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:#bfa15d;
+  margin-bottom:12px;
+}
+
+.core-positioning p {
+  font-size:18px;
+  line-height:1.7;
+  color:#bfa15d;
+  max-width:900px;
+  margin:0 auto;
+}
+
+@media(max-width:768px){
+  #brand-identity{padding:35px 18px;}
+  .section-title{font-size:22px;}
+  .section-intro{font-size:18px;}
+  .intro-card h3, .core-positioning h3{font-size:18px;}
+  .intro-card p, .intro-card li, .core-positioning p{font-size:16px;}
+}
+</style>
+
+
+
+
+
+<section id="buyer-persona-gym" class="panel inview">
+  <h2 class="section-title">Buyer Persona: Fitness Seeker Alexandria</h2>
+  <p class="section-intro">
+    A representation of gym-goers in Alexandria who seek premium fitness experiences, balanced wellness, and a community-driven environment.
+  </p>
+
+  <div class="persona-cards">
+    <div class="persona-card">
+      <h3>Demographics</h3>
+      <ul>
+        <li>Age: 18 – 50 years</li>
+        <li>Gender: 50% Male / 50% Female</li>
+        <li>Annual Income: EGP 200,000 – 500,000+</li>
+        <li>Education: University graduates, professionals, entrepreneurs</li>
+        <li>Location: Alexandria (city center, suburbs with access to gym)</li>
+      </ul>
+    </div>
+
+    <div class="persona-card">
+      <h3>Psychographics</h3>
+      <ul>
+        <li>Lifestyle: Health-conscious, routine-oriented, social participation</li>
+        <li>Values: Results, consistency, community, expert guidance</li>
+        <li>Interests: Group classes, nutrition, tracking progress, fitness trends</li>
+        <li>Personality: Motivated, goal-driven, community-oriented, trending</li>
+      </ul>
+    </div>
+
+    <div class="persona-card">
+      <h3>Goals & Motivations</h3>
+      <ul>
+        <li>Build strength, lean physique, better health metrics</li>
+        <li>Be part of a fitness community & share progress</li>
+        <li>Access high-quality coaching and facilities</li>
+        <li>Stay motivated through challenges, rewards, tracking</li>
+      </ul>
+    </div>
+
+    <div class="persona-card">
+      <h3>Challenges & Pain Points</h3>
+      <ul>
+        <li>Time constraints vs consistency</li>
+        <li>Overcrowded gyms or equipment wait times</li>
+        <li>Motivation drops, plateauing results</li>
+        <li>Cost vs value (expecting premium service for premium price)</li>
+      </ul>
+    </div>
+
+    <div class="persona-card">
+      <h3>Preferred Channels</h3>
+      <ul>
+        <li>Instagram & TikTok (class highlights, transformations)</li>
+        <li>YouTube / Reels (workouts, tips)</li>
+        <li>Email & mobile app for schedule / offers</li>
+        <li>Referrals & word-of-mouth within local communities</li>
+      </ul>
+    </div>
+
+    <div class="persona-card">
+      <h3>Behavior Patterns</h3>
+      <ul>
+        <li>Visits gym 3–5 times per week</li>
+        <li>Uses both group classes & strength training</li>
+        <li>Tracks progress (wearables, app stats)</li>
+        <li>Responsive to loyalty offers and challenge programs</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Visual / Data summary -->
+  <div class="persona-data" style="margin-top:40px; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:30px; text-align:center;">
+    <div class="data-item">
+      <h4 class="data-title">Age</h4>
+      <div class="data-val">≈ 18 - 50 </div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Income Bracket</h4>
+      <div class="data-val">EGP 200,000 – 500,000+</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Weekly Visits</h4>
+      <div class="data-val">3 – 5 days</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Primary Motivation</h4>
+      <div class="data-val">Health + Aesthetic Goals</div>
+    </div>
+  </div>
+</section>
+
+<style>
+#buyer-persona-gym {
+  border-radius:20px;
+  padding:40px 30px;
+  margin:40px auto;
+  background:#1c1c1c;
+  max-width:1200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  color:#bfa15d;
+  text-align:center;
+}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  color:#dcdcdc; /* muted white */
+  margin-bottom:18px;
+  border-bottom:2px solid #bfa15d;
+  padding-bottom:8px;
+}
+
+.section-intro {
+  font-size:20px;
+  line-height:1.7;
+  margin-bottom:30px;
+  color:#bfa15d;
+}
+
+.persona-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+  gap:25px;
+}
+
+.persona-card {
+  background:#2a2a2a;
+  border-radius:20px;
+  padding:26px 20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.persona-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.persona-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:#dcdcdc;
+  margin-bottom:12px;
+}
+
+.persona-card p, .persona-card li {
+  font-size:18px;
+  line-height:1.7;
+  color:#bfa15d;
+  text-align:center;
+}
+
+.persona-card ul {
+  padding-left:22px;
+  text-align:left;
+}
+
+.persona-data {
+  margin-top:40px;
+}
+
+.persona-data .data-item .data-title {
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  color:#dcdcdc;
+  margin-bottom:6px;
+}
+
+.persona-data .data-item .data-val {
+  font-size:20px;
+  color:#bfa15d;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+@media(max-width:768px) {
+  #buyer-persona-gym{padding:30px 18px;}
+  .section-title{font-size:22px;}
+  .section-intro{font-size:18px;}
+  .persona-card h3{font-size:18px;}
+  .persona-card p, .persona-card li{font-size:16px;}
+  .persona-data .data-item .data-val{font-size:18px;}
+}
+</style>
+
+
+
+<section id="customer-journey" class="panel inview">
+
+  <!-- Section Header -->
+  <h2 class="section-title">Customer Journey Mapping</h2>
+  <p class="section-intro">
+    Mapping the complete journey of Alexandria's elite gym-goers—from awareness to advocacy—highlighting touchpoints, channels, and key metrics for our 12-week campaign.
+  </p>
+
+  <!-- Journey Cards -->
+  <div class="intro-cards">
+    <div class="intro-card">
+      <h3>Awareness</h3>
+      <ul>
+        <li>Touchpoints: Instagram, TikTok, Facebook Fitness Communities</li>
+        <li>Content: Hero visuals, influencer endorsements, trial offers</li>
+        <li>Metrics: Reach 180,000, Engagement 18.2%</li>
+        <li>Goal: Introduce gym as Alexandria’s elite fitness destination</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Consideration</h3>
+      <ul>
+        <li>Touchpoints: Social Ads, Email, Landing Pages</li>
+        <li>Content: VIP trial offers, class schedules, testimonials</li>
+        <li>Metrics: CTR 4.2%, Email open rate 38%</li>
+        <li>Goal: Engage prospects and nurture interest in membership</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Conversion</h3>
+      <ul>
+        <li>Touchpoints: Membership sign-up, In-gym onboarding</li>
+        <li>Content: Exclusive welcome packages, personal training sessions</li>
+        <li>Metrics: New Members 1,800, Conversion Rate 12%, ROI 4,780%</li>
+        <li>Goal: Convert engaged prospects into loyal members</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Retention</h3>
+      <ul>
+        <li>Touchpoints: Personalized Email, SMS, VIP classes, Seasonal Challenges</li>
+        <li>Content: Custom fitness plans, loyalty rewards</li>
+        <li>Metrics: 15% Retention Rate, 18% Re-engagement</li>
+        <li>Goal: Maintain long-term membership and repeat visits</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Advocacy</h3>
+      <ul>
+        <li>Touchpoints: Social sharing, Referral Programs, VIP Testimonials</li>
+        <li>Content: Referral incentives, user-generated content campaigns</li>
+        <li>Metrics: Positive reviews, VIP referrals, social engagement growth</li>
+        <li>Goal: Transform loyal members into brand advocates</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Campaign Metrics -->
+  <div class="intro-data" style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:25px; text-align:center;">
+    <div class="data-item">
+      <h4 class="data-title">Campaign Duration</h4>
+      <div class="data-val">12 Weeks</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Target Audience</h4>
+      <div class="data-val">18–50 yrs, 50% M / 50% F</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Reach</h4>
+      <div class="data-val">180,000</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">New Members</h4>
+      <div class="data-val">1,800</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Engagement Rate</h4>
+      <div class="data-val">18.2%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Revenue</h4>
+      <div class="data-val">1,600,000 EGP</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">ROI</h4>
+      <div class="data-val">4,780%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Avg Membership Value</h4>
+      <div class="data-val">600 EGP</div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+#customer-journey {
+  border: 6px solid rgba(191,161,93,0.4); /* thick faded gold border */
+  border-radius:24px;
+  padding:45px 35px;
+  margin:40px auto;
+  background:#1c1c1c;
+  max-width:1200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  color:#bfa15d;
+  text-align:center;
+}
+
+.intro-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.intro-card {
+  background:#2a2a2a;
+  border-radius:20px;
+  padding:26px 20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+  text-align:left;
+}
+
+.intro-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.intro-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  color:#e6e6e6;
+  margin-bottom:12px;
+}
+
+.intro-card ul {
+  padding-left:20px;
+  line-height:1.8;
+  font-size:18px;
+  color:#bfa15d;
+  margin:0;
+}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:32px;
+  color:#e6e6e6;
+  margin-bottom:20px;
+  border-bottom:3px solid #bfa15d;
+  padding-bottom:8px;
+}
+
+.section-intro {
+  font-size:22px;
+  color:#bfa15d;
+  max-width:900px;
+  margin:0 auto 50px;
+}
+
+.intro-data {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:25px;
+  margin-top:40px;
+  text-align:center;
+}
+
+.data-item h4.data-title {
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  color:#e6e6e6;
+  margin-bottom:6px;
+}
+
+.data-item .data-val {
+  font-size:20px;
+  font-weight:700;
+  color:#bfa15d;
+}
+
+@media(max-width:768px){
+  #customer-journey{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .intro-card h3{font-size:20px;}
+  .intro-card ul{font-size:16px;}
+  .data-item h4.data-title{font-size:16px;}
+  .data-item .data-val{font-size:16px;}
+}
+</style>
+
+
+
+
+<section id="audience-insights" class="panel inview">
+
+  <!-- Section Header -->
+  <h2 class="section-title">Audience Insights & Behavioral Trends</h2>
+  <p class="section-intro">
+    Comprehensive analysis of Alexandria’s elite gym-goers, including behavioral patterns, engagement trends, and actionable insights for targeting and retention across a 12-week campaign.
+  </p>
+
+  <!-- Insight Cards -->
+  <div class="intro-cards">
+    <div class="intro-card">
+      <h3>Demographics</h3>
+      <ul>
+        <li>Age: 18–50</li>
+        <li>Gender: 50% Male / 50% Female</li>
+        <li>Income: 200K–500K+ EGP/year</li>
+        <li>Location: Alexandria, urban districts</li>
+        <li>Education: College to Master’s or higher</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Psychographics</h3>
+      <ul>
+        <li>Lifestyle: Busy professionals & trend-focused adults seeking premium fitness experiences</li>
+        <li>Values: Quality, exclusivity, aesthetics, prestige, convenience</li>
+        <li>Interests: Fitness, health trends, lifestyle content, social networking</li>
+        <li>Personality: Ambitious, socially influential, adventurous, disciplined</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Engagement Behavior</h3>
+      <ul>
+        <li>Social Media Engagement: 18.2%</li>
+        <li>Email Open Rate: 38%</li>
+        <li>CTR: 4.2% on VIP campaigns</li>
+        <li>Top Platforms: Instagram, TikTok, Facebook Fitness Communities</li>
+        <li>Content Preference: Hero visuals, curated experiences, seasonal offers</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Purchase Behavior</h3>
+      <ul>
+        <li>New Members: 1,800</li>
+        <li>Average Membership Value: 600 EGP</li>
+        <li>Conversion Rate: 12%</li>
+        <li>Repeat Visits: 1.5–2/week</li>
+        <li>ROI: 4,780%</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Preferences & Influencers</h3>
+      <ul>
+        <li>Favors curated fitness programs and premium class experiences</li>
+        <li>Influenced by social proof, VIP exclusivity, and peer recommendations</li>
+        <li>Responds to personalized campaigns and loyalty perks</li>
+        <li>Shares fitness achievements and premium experiences online</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Opportunities & Insights</h3>
+      <ul>
+        <li>Use short-form Instagram/TikTok videos to increase engagement</li>
+        <li>Offer exclusive seasonal challenges and programs to boost retention</li>
+        <li>Segment email campaigns for personalized VIP messaging</li>
+        <li>Partner with local fitness influencers to attract aspirational gym-goers</li>
+        <li>Highlight premium training and curated experiences to differentiate from competitors</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Audience Metrics -->
+  <div class="intro-data" style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:25px; text-align:center;">
+    <div class="data-item">
+      <h4 class="data-title">Age</h4>
+      <div class="data-val">18–50</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Gender</h4>
+      <div class="data-val">50% M / 50% F</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Income</h4>
+      <div class="data-val">200K–500K+ EGP</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">New Members</h4>
+      <div class="data-val">1,800</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Engagement Rate</h4>
+      <div class="data-val">18.2%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Conversion Rate</h4>
+      <div class="data-val">12%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">ROI</h4>
+      <div class="data-val">4,780%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Avg Membership Value</h4>
+      <div class="data-val">600 EGP</div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+#audience-insights {
+  border: 6px solid rgba(191,161,93,0.4); /* thick faded gold border */
+  border-radius:24px;
+  padding:45px 35px;
+  margin:40px auto;
+  background:#1c1c1c;
+  max-width:1200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  color:#bfa15d;
+  text-align:center;
+}
+
+.intro-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.intro-card {
+  background:#2a2a2a;
+  border-radius:20px;
+  padding:26px 20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+  text-align:left;
+}
+
+.intro-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.intro-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  color:#e6e6e6;
+  margin-bottom:12px;
+}
+
+.intro-card ul {
+  padding-left:20px;
+  line-height:1.8;
+  font-size:18px;
+  color:#bfa15d;
+  margin:0;
+}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:32px;
+  color:#e6e6e6;
+  margin-bottom:20px;
+  border-bottom:3px solid #bfa15d;
+  padding-bottom:8px;
+}
+
+.section-intro {
+  font-size:22px;
+  color:#bfa15d;
+  max-width:900px;
+  margin:0 auto 50px;
+}
+
+.intro-data {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:25px;
+  margin-top:40px;
+  text-align:center;
+}
+
+.data-item h4.data-title {
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  color:#e6e6e6;
+  margin-bottom:6px;
+}
+
+.data-item .data-val {
+  font-size:20px;
+  font-weight:700;
+  color:#bfa15d;
+}
+
+@media(max-width:768px){
+  #audience-insights{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .intro-card h3{font-size:20px;}
+  .intro-card ul{font-size:16px;}
+  .data-item h4.data-title{font-size:16px;}
+  .data-item .data-val{font-size:16px;}
+}
+</style>
+
+
+
+
+
+<section id="smart-goals" class="panel inview">
+
+  <!-- Section Header -->
+  <h2 class="section-title">SMART Goals & Performance</h2>
+  <p class="section-intro">
+    High-value, measurable objectives for the Mory Gym campaign, ensuring all efforts contribute directly to revenue growth, membership sign-ups, and engagement.
+  </p>
+
+  <!-- SMART Goals Cards -->
+  <div class="intro-cards">
+    <div class="intro-card">
+      <h3>Specific</h3>
+      <p>Position the Gym as Alexandria’s top luxury fitness destination via premium membership conversion.</p>
+      <p><strong>Target:</strong> 1,500 New Members<br><strong>Actual:</strong> 1,800 Members</p>
+    </div>
+
+    <div class="intro-card">
+      <h3>Measurable</h3>
+      <p>Maximize engagement, ROI, and membership growth over the 12-week campaign.</p>
+      <p><strong>Target ROI:</strong> 1,000%<br><strong>Actual ROI:</strong> 4,780%</p>
+    </div>
+
+    <div class="intro-card">
+      <h3>Achievable</h3>
+      <p>Leverage high-quality visuals and local targeting to generate interest and engagement among the target audience.</p>
+      <p><strong>Target Reach:</strong> 150,000<br><strong>Actual Reach:</strong> 180,000</p>
+    </div>
+
+    <div class="intro-card">
+      <h3>Relevant</h3>
+      <p>Support the Gym’s positioning as Alexandria’s premier fitness destination for affluent adults.</p>
+      <p><strong>Target Conversion:</strong> 10%<br><strong>Actual:</strong> 12%</p>
+    </div>
+
+    <div class="intro-card">
+      <h3>Time-bound</h3>
+      <p>Execute the full 12-week campaign sequence on schedule.</p>
+      <p><strong>Duration:</strong> 12 Weeks<br><strong>Status:</strong> Achieved ✅</p>
+    </div>
+  </div>
+
+  <!-- Campaign Achievement Summary -->
+  <div class="intro-data" style="margin-top:50px;">
+    <div class="data-item">
+      <h4 class="data-title">Reach</h4>
+      <div class="data-val">180,000</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">New Members</h4>
+      <div class="data-val">1,800</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Engagement</h4>
+      <div class="data-val">18.2%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">ROI</h4>
+      <div class="data-val">4,780%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Conversion Rate</h4>
+      <div class="data-val">12%</div>
+    </div>
+    <div class="data-item">
+      <h4 class="data-title">Duration</h4>
+      <div class="data-val">12 Weeks</div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+#smart-goals {
+  border:6px solid rgba(214,184,123,0.4);
+  border-radius:24px;
+  padding:45px 35px;
+  margin:40px auto;
+  background:#1e1e1e;
+  max-width:1200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  color:#e6c6aa;
+  text-align:center;
+}
+
+.intro-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.intro-card {
+  background:#2b2b2b;
+  border-radius:20px;
+  padding:30px 25px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+  text-align:left;
+}
+
+.intro-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.intro-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  color:#f2f2f2;
+  margin-bottom:12px;
+}
+
+.intro-card p {
+  font-size:18px;
+  line-height:1.7;
+  color:#e6c6aa;
+}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:32px;
+  color:#f2f2f2;
+  margin-bottom:20px;
+  border-bottom:3px solid #d6b87b;
+  padding-bottom:8px;
+}
+
+.section-intro {
+  font-size:22px;
+  color:#d6b87b;
+  max-width:900px;
+  margin:0 auto 50px;
+}
+
+.intro-data {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:25px;
+  margin-top:40px;
+  text-align:center;
+}
+
+.data-item h4.data-title {
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  color:#f2f2f2;
+  margin-bottom:6px;
+}
+
+.data-item .data-val {
+  font-size:20px;
+  font-weight:700;
+  color:#d6b87b;
+}
+
+@media(max-width:768px){
+  #smart-goals{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .intro-card h3{font-size:20px;}
+  .intro-card p{font-size:16px;}
+  .data-item h4.data-title{font-size:16px;}
+  .data-item .data-val{font-size:16px;}
+}
+</style>
+
+
+
+
+
+
+<section id="budget-flighting" class="panel inview">
+
+  <!-- Section Header -->
+  <h2 class="section-title">Budget Allocation, Flighting & ROI Summary</h2>
+  <p class="section-intro">
+    Optimized spend across channels for the 12-week Mory Gym campaign, showing financial efficiency, ROAS per channel, and projected membership value.
+  </p>
+
+  <!-- Budget & Performance Cards -->
+  <div class="intro-cards">
+    <div class="intro-card">
+      <h3>Budget Allocation</h3>
+      <ul>
+        <li>Instagram & TikTok Ads: 50,000 EGP</li>
+        <li>Google Ads: 30,000 EGP</li>
+        <li>Email Campaigns: 20,000 EGP</li>
+        <li>Landing Pages & Retargeting: 25,000 EGP</li>
+        <li>Influencer Collaborations: 15,000 EGP</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Spend vs Revenue</h3>
+      <ul>
+        <li>Total Spend: 140,000 EGP</li>
+        <li>Total Revenue: 1,600,000 EGP</li>
+        <li>ROI Overall: 4,780%</li>
+        <li>Instagram/TikTok ROI: 5,200%</li>
+        <li>Email Campaign ROI: 3,900%</li>
+      </ul>
+    </div>
+
+    <div class="intro-card">
+      <h3>Projected Membership Value</h3>
+      <ul>
+        <li>Average Membership Value: 600 EGP</li>
+        <li>New Members: 1,800</li>
+        <li>Projected Total Revenue: 1,600,000 EGP</li>
+        <li>Retention Rate: 18%</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Forecast Chart -->
+  <div class="chart-card">
+    <h3>Forecast vs Actual Performance</h3>
+    <canvas id="forecastChartGym" width="800" height="300"></canvas>
+  </div>
+
+  <!-- ROI Breakdown & Key Metrics -->
+  <div class="intro-cards" style="margin-top:40px;">
+    <div class="intro-card">
+      <h3>ROI Breakdown by Channel</h3>
+      <canvas id="roiChannelChartGym" width="400" height="250"></canvas>
+    </div>
+    <div class="intro-card">
+      <h3>Key Financial Metrics</h3>
+      <table>
+        <thead>
+          <tr><th>Metric</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Total Spend</td><td>140,000 EGP</td></tr>
+          <tr><td>Total Revenue</td><td>1,600,000 EGP</td></tr>
+          <tr><td>ROI Overall</td><td>4,780%</td></tr>
+          <tr><td>Avg Membership Value</td><td>600 EGP</td></tr>
+          <tr><td>New Members</td><td>1,800</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+<style>
+#budget-flighting {
+  border:6px solid rgba(214,184,123,0.4);
+  border-radius:24px;
+  padding:45px 35px;
+  margin:40px auto;
+  background:#1e1e1e;
+  max-width:1200px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  color:#d6b87b;
+  text-align:center;
+}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:32px;
+  color:#f2f2f2;
+  margin-bottom:20px;
+  border-bottom:3px solid #d6b87b;
+  padding-bottom:8px;
+}
+
+.section-intro {
+  font-size:22px;
+  color:#d6b87b;
+  max-width:900px;
+  margin:0 auto 50px;
+}
+
+.intro-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.intro-card {
+  background:#2b2b2b;
+  border-radius:20px;
+  padding:30px 25px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+  text-align:left;
+}
+
+.intro-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.intro-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  color:#f2f2f2;
+  margin-bottom:12px;
+}
+
+.intro-card ul {
+  font-size:18px;
+  color:#d6b87b;
+  line-height:1.8;
+  padding-left:20px;
+}
+
+.intro-card table {
+  width:100%;
+  font-size:18px;
+  color:#d6b87b;
+  border-collapse:collapse;
+}
+
+.intro-card table th, .intro-card table td {
+  border:1px solid #1e1e1e;
+  padding:12px;
+  color:#f2f2f2;
+  text-align:center;
+}
+
+.chart-card {
+  background:#2b2b2b;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  margin-top:40px;
+}
+
+.chart-card h3 {
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  color:#f2f2f2;
+  margin-bottom:25px;
+}
+
+@media(max-width:768px){
+  #budget-flighting{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .intro-card h3{font-size:20px;}
+  .intro-card ul{font-size:16px;}
+  .intro-card table{font-size:16px;}
+  .chart-card h3{font-size:20px;}
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctxForecastGym = document.getElementById('forecastChartGym').getContext('2d');
+new Chart(ctxForecastGym,{
+  type:'bar',
+  data:{
+    labels:['Reach','New Members','Engagement %','Revenue'],
+    datasets:[
+      { label:'Forecast', data:[150000,1500,15,1200000], backgroundColor:'#444', borderColor:'#d6b87b', borderWidth:2 },
+      { label:'Actual', data:[180000,1800,18.2,1600000], backgroundColor:'#d6b87b', borderColor:'#f2f2f2', borderWidth:2 }
+    ]
+  },
+  options:{
+    responsive:true,
+    scales:{ y:{ beginAtZero:true, ticks:{ color:'#f2f2f2', font:{size:16} } }, x:{ ticks:{ color:'#f2f2f2', font:{size:16} } } },
+    plugins:{ legend:{ labels:{ color:'#f2f2f2', font:{size:16} } }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } },
+    animation:{ duration:1500, easing:'easeOutQuart' }
+  }
+});
+
+const ctxROIChannelGym = document.getElementById('roiChannelChartGym').getContext('2d');
+new Chart(ctxROIChannelGym,{
+  type:'doughnut',
+  data:{
+    labels:['Instagram/TikTok','Google Ads','Email','Landing Pages','Influencers'],
+    datasets:[{
+      data:[5.2,4.8,3.9,4.0,4.5],
+      backgroundColor:['#d6b87b','#444','#666','#888','#aaa'],
+      borderColor:'#1e1e1e',
+      borderWidth:2
+    }]
+  },
+  options:{
+    responsive:true,
+    plugins:{ legend:{ position:'bottom', labels:{ color:'#f2f2f2', font:{size:16} } }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } },
+    animation:{ animateScale:true, duration:1600, easing:'easeInOutQuart' }
+  }
+});
+</script>
+
+
+
+
+
+
+
+<section id="gym-kpis" class="panel inview">
+
+  <!-- Section Header -->
+  <h2 class="section-title">Gym Campaign KPIs & Performance</h2>
+  <p class="section-intro">
+    Key performance indicators for Mory Gym’s 12-week premium campaign targeting Alexandria’s active and urban professionals.
+  </p>
+
+  <!-- Top KPIs Panel -->
+  <div class="kpi-cards">
+    <div class="kpi-card"><h3>Total Reach</h3><p>180,000</p></div>
+    <div class="kpi-card"><h3>New Members</h3><p>1,800</p></div>
+    <div class="kpi-card"><h3>Engagement Rate</h3><p>18.2%</p></div>
+    <div class="kpi-card"><h3>Revenue</h3><p>1,600,000 EGP</p></div>
+    <div class="kpi-card"><h3>ROI</h3><p>4,780%</p></div>
+    <div class="kpi-card"><h3>Avg Membership Value</h3><p>600 EGP</p></div>
+  </div>
+
+  <!-- KPI Charts -->
+  <div class="chart-section">
+    <div class="chart-card">
+      <h3>Forecast vs Actual</h3>
+      <canvas id="kpiBarChart" width="500" height="300"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h3>ROI by Channel</h3>
+      <canvas id="kpiDoughnutChart" width="500" height="300"></canvas>
+    </div>
+  </div>
+
+  <!-- Reach & Engagement Graph -->
+  <div class="chart-card">
+    <h3>Weekly Reach & Engagement</h3>
+    <canvas id="reachEngagementChart" width="800" height="350"></canvas>
+  </div>
+
+</section>
+
+<style>
+.panel { max-width:1200px; margin:40px auto; padding:45px 35px; background:#1e1e1e; border-radius:24px; box-shadow:0 10px 25px rgba(0,0,0,0.15); font-family:'Times New Roman', serif; color:#d6b87b; text-align:center; }
+.section-title { font-size:32px; color:#f2f2f2; margin-bottom:20px; border-bottom:3px solid #d6b87b; padding-bottom:8px; }
+.section-intro { font-size:22px; color:#d6b87b; max-width:900px; margin:0 auto 50px; }
+
+.kpi-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-bottom:60px; }
+.kpi-card { background:#2b2b2b; padding:30px 25px; border-radius:20px; box-shadow:0 6px 20px rgba(0,0,0,0.2); transition:transform 0.4s ease, box-shadow 0.4s ease; }
+.kpi-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,0.25); }
+.kpi-card h3 { font-size:22px; color:#f2f2f2; margin-bottom:12px; }
+.kpi-card p { font-size:24px; font-weight:bold; color:#d6b87b; }
+
+.chart-section { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; margin-bottom:60px; }
+.chart-card { background:#2b2b2b; padding:35px; border-radius:20px; box-shadow:0 6px 20px rgba(0,0,0,0.2); text-align:center; }
+.chart-card h3 { font-size:22px; color:#f2f2f2; margin-bottom:25px; }
+
+@media(max-width:768px){
+  .panel{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .kpi-card h3, .chart-card h3{font-size:20px;}
+  .kpi-card p{font-size:22px;}
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Forecast vs Actual Bar Chart
+new Chart(document.getElementById('kpiBarChart').getContext('2d'),{
+  type:'bar',
+  data:{
+    labels:['Reach','New Members','Engagement %','Revenue'],
+    datasets:[
+      { label:'Forecast', data:[150000,1500,15,1200000], backgroundColor:'#444', borderColor:'#d6b87b', borderWidth:2 },
+      { label:'Actual', data:[180000,1800,18.2,1600000], backgroundColor:'#d6b87b', borderColor:'#f2f2f2', borderWidth:2 }
+    ]
+  },
+  options:{ responsive:true, scales:{ y:{ beginAtZero:true, ticks:{ color:'#f2f2f2', font:{size:16} } }, x:{ ticks:{ color:'#f2f2f2', font:{size:16} } } }, plugins:{ legend:{ labels:{ color:'#f2f2f2', font:{size:16} } }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } }, animation:{ duration:1500, easing:'easeOutQuart' } }
+});
+
+// ROI Doughnut Chart
+new Chart(document.getElementById('kpiDoughnutChart').getContext('2d'),{
+  type:'doughnut',
+  data:{ labels:['Instagram/TikTok','Google Ads','Email','Landing Pages','Influencers'], datasets:[{ data:[5.0,4.5,4.2,4.6,4.7], backgroundColor:['#d6b87b','#444','#666','#888','#aaa'], borderColor:'#1e1e1e', borderWidth:2 }] },
+  options:{ responsive:true, plugins:{ legend:{ position:'bottom', labels:{ color:'#f2f2f2', font:{size:16} } }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } }, animation:{ animateScale:true, duration:1600, easing:'easeInOutQuart' } }
+});
+
+// Weekly Reach & Engagement Line Chart
+new Chart(document.getElementById('reachEngagementChart').getContext('2d'),{
+  type:'line',
+  data:{
+    labels:['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7','Week 8','Week 9','Week 10','Week 11','Week 12'],
+    datasets:[
+      { label:'Reach', data:[12000,14000,15000,16000,16500,17000,17500,18000,18500,19000,19500,20000], borderColor:'#d6b87b', backgroundColor:'rgba(214,184,123,0.2)', tension:0.3, fill:true, yAxisID:'y' },
+      { label:'Engagement %', data:[10,11,12,13,14,15,16,16.5,17,17.5,18,18.2], borderColor:'#f2f2f2', backgroundColor:'rgba(242,242,242,0.2)', tension:0.3, fill:true, yAxisID:'y1' }
+    ]
+  },
+  options:{
+    responsive:true,
+    scales:{
+      y:{ type:'linear', position:'left', beginAtZero:true, title:{display:true,text:'Reach',color:'#f2f2f2'}, ticks:{color:'#f2f2f2', font:{size:16}} },
+      y1:{ type:'linear', position:'right', beginAtZero:true, max:25, title:{display:true,text:'Engagement %',color:'#f2f2f2'}, ticks:{color:'#f2f2f2', font:{size:16}} },
+      x:{ ticks:{ color:'#f2f2f2', font:{size:16}} }
+    },
+    plugins:{ legend:{ labels:{ color:'#f2f2f2', font:{size:16}} }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b'} },
+    animation:{ duration:1500, easing:'easeOutQuart' }
+  }
+});
+</script>
+
+
+
+
+
+<section id="gym-funnels" class="panel inview">
+
+  <!-- Section Header -->
+  <h2 class="section-title">Gym Campaign Conversion Funnels</h2>
+  <p class="section-intro">
+    A breakdown of Mory Gym’s 12-week campaign funnel, illustrating the flow from Awareness to Advocacy and corresponding performance metrics.
+  </p>
+
+  <!-- Funnel Overview Panels -->
+  <div class="kpi-cards">
+    <div class="kpi-card"><h3>Awareness</h3><p>180,000</p><small>Reached via Instagram, TikTok, Google Ads</small></div>
+    <div class="kpi-card"><h3>Engagement</h3><p>18.2%</p><small>Likes, Shares, Clicks, Comments</small></div>
+    <div class="kpi-card"><h3>Leads</h3><p>3,500</p><small>Landing page sign-ups & inquiries</small></div>
+    <div class="kpi-card"><h3>Conversions</h3><p>1,800</p><small>New Memberships</small></div>
+    <div class="kpi-card"><h3>Revenue</h3><p>1,600,000 EGP</p><small>Membership Fees & Upsells</small></div>
+    <div class="kpi-card"><h3>ROI</h3><p>4,780%</p><small>Exceptional campaign efficiency</small></div>
+  </div>
+
+  <!-- Funnel Flow Chart -->
+  <div class="chart-card">
+    <h3>Funnel Flow Visualization</h3>
+    <canvas id="funnelFlowChart" width="800" height="400"></canvas>
+  </div>
+
+  <!-- Funnel Conversion Rates & Channel Contribution -->
+  <div class="chart-section">
+    <div class="chart-card">
+      <h3>Conversion Rates</h3>
+      <canvas id="funnelConversionChart" width="400" height="300"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Channel Contribution to Conversions</h3>
+      <canvas id="funnelChannelChart" width="400" height="300"></canvas>
+    </div>
+  </div>
+
+</section>
+
+<style>
+/* Reuse same panel and card styles as previous sections */
+.panel { max-width:1200px; margin:40px auto; padding:45px 35px; background:#1e1e1e; border-radius:24px; box-shadow:0 10px 25px rgba(0,0,0,0.15); font-family:'Times New Roman', serif; color:#d6b87b; text-align:center; }
+.section-title { font-size:32px; color:#f2f2f2; margin-bottom:20px; border-bottom:3px solid #d6b87b; padding-bottom:8px; }
+.section-intro { font-size:22px; color:#d6b87b; max-width:900px; margin:0 auto 50px; }
+
+.kpi-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:25px; margin-bottom:60px; }
+.kpi-card { background:#2b2b2b; padding:30px; border-radius:20px; box-shadow:0 6px 20px rgba(0,0,0,0.2); transition:transform 0.4s ease, box-shadow 0.4s ease; }
+.kpi-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,0.25); }
+.kpi-card h3 { font-size:22px; color:#f2f2f2; margin-bottom:12px; }
+.kpi-card p { font-size:24px; font-weight:bold; color:#d6b87b; margin-bottom:6px; }
+.kpi-card small { font-size:16px; color:#f2f2f2; }
+
+.chart-section { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; margin-bottom:60px; }
+.chart-card { background:#2b2b2b; padding:35px; border-radius:20px; box-shadow:0 6px 20px rgba(0,0,0,0.2); text-align:center; }
+.chart-card h3 { font-size:22px; color:#f2f2f2; margin-bottom:25px; }
+
+@media(max-width:768px){
+  .panel{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .kpi-card h3, .chart-card h3{font-size:20px;}
+  .kpi-card p{font-size:22px;}
+  .kpi-card small{font-size:14px;}
+}
+</style>
+
+<script>
+// Funnel Flow Chart
+new Chart(document.getElementById('funnelFlowChart').getContext('2d'),{
+  type:'bar',
+  data:{ labels:['Awareness','Engagement','Leads','Conversions','Revenue'], datasets:[{ label:'Number of People', data:[180000,32760,3500,1800,1800], backgroundColor:'#d6b87b', borderColor:'#f2f2f2', borderWidth:2 }] },
+  options:{ responsive:true, scales:{ y:{ beginAtZero:true, ticks:{ color:'#f2f2f2', font:{size:16} } }, x:{ ticks:{ color:'#f2f2f2', font:{size:16} } } }, plugins:{ legend:{ display:false }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } }, animation:{ duration:1500, easing:'easeOutQuart' } }
+});
+
+// Funnel Conversion Rate Chart
+new Chart(document.getElementById('funnelConversionChart').getContext('2d'),{
+  type:'bar',
+  data:{ labels:['Awareness→Engagement','Engagement→Leads','Leads→Conversions','Conversions→Revenue'], datasets:[{ label:'Conversion Rate %', data:[18.2,10.7,51.4,100], backgroundColor:'#d6b87b', borderColor:'#f2f2f2', borderWidth:2 }] },
+  options:{ responsive:true, scales:{ y:{ beginAtZero:true, max:120, ticks:{ color:'#f2f2f2', font:{size:16} }, title:{display:true,text:'%', color:'#f2f2f2'}}, x:{ ticks:{ color:'#f2f2f2', font:{size:16} } } }, plugins:{ legend:{ display:false }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } }, animation:{ duration:1500, easing:'easeOutQuart' } }
+});
+
+// Channel Contribution Chart
+new Chart(document.getElementById('funnelChannelChart').getContext('2d'),{
+  type:'doughnut',
+  data:{ labels:['Instagram/TikTok','Google Ads','Email','Landing Pages','Influencers'], datasets:[{ data:[45,25,10,15,5], backgroundColor:['#d6b87b','#444','#666','#888','#aaa'], borderColor:'#1e1e1e', borderWidth:2 }] },
+  options:{ responsive:true, plugins:{ legend:{ position:'bottom', labels:{ color:'#f2f2f2', font:{size:16} } }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } }, animation:{ animateScale:true, duration:1600, easing:'easeInOutQuart' } }
+});
+</script>
+
+
+
+
+
+<section id="mory-seo" class="panel inview">
+
+  <!-- Section Header -->
+  <h2 class="section-title">Mory Gym SEO Performance</h2>
+  <p class="section-intro">
+    Detailed SEO insights for Mory Gym’s 12-week campaign targeting 18–50 years old, focusing on organic reach, keyword performance, and search visibility in Alexandria.
+  </p>
+
+  <!-- Key SEO KPIs -->
+  <div class="kpi-cards">
+    <div class="kpi-card"><h3>Organic Reach</h3><p>120,000</p><small>Unique visitors from search engines</small></div>
+    <div class="kpi-card"><h3>Top Keywords</h3><p>12</p><small>Ranked on first page</small></div>
+    <div class="kpi-card"><h3>CTR</h3><p>14.8%</p><small>Click-through rate from SERP</small></div>
+    <div class="kpi-card"><h3>Average Position</h3><p>3.6</p><small>Across targeted keywords</small></div>
+    <div class="kpi-card"><h3>New Leads</h3><p>450</p><small>Generated from organic traffic</small></div>
+  </div>
+
+  <!-- SEO Funnel Flow Chart -->
+  <div class="chart-card">
+    <h3>SEO Funnel Flow</h3>
+    <canvas id="seoFunnelChart" width="800" height="400"></canvas>
+  </div>
+
+  <!-- Top Keywords Table -->
+  <div class="chart-card">
+    <h3>Top Performing Keywords</h3>
+    <table class="seo-table">
+      <thead>
+        <tr><th>Keyword</th><th>Search Volume</th><th>Position</th><th>CTR %</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mory Gym Alexandria</td><td>3,200</td><td>1</td><td>18%</td></tr>
+        <tr><td>Fitness Classes Alexandria</td><td>1,800</td><td>2</td><td>15%</td></tr>
+        <tr><td>Personal Trainer Alexandria</td><td>1,200</td><td>3</td><td>13%</td></tr>
+        <tr><td>Gym Membership Alexandria</td><td>1,000</td><td>1</td><td>20%</td></tr>
+        <tr><td>HIIT Classes Alexandria</td><td>900</td><td>4</td><td>12%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Organic Traffic & Top Pages Charts -->
+  <div class="chart-section">
+    <div class="chart-card">
+      <h3>Organic Traffic Over Weeks</h3>
+      <canvas id="organicTrafficChart" width="400" height="300"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Top Pages by Visits</h3>
+      <canvas id="topPagesChart" width="400" height="300"></canvas>
+    </div>
+  </div>
+
+</section>
+
+<style>
+/* Reuse same panel and card styles */
+.panel { max-width:1200px; margin:40px auto; padding:45px 35px; background:#1e1e1e; border-radius:24px; box-shadow:0 10px 25px rgba(0,0,0,0.15); font-family:'Times New Roman', serif; color:#d6b87b; text-align:center; }
+.section-title { font-size:32px; color:#f2f2f2; margin-bottom:20px; border-bottom:3px solid #d6b87b; padding-bottom:8px; }
+.section-intro { font-size:22px; color:#d6b87b; max-width:900px; margin:0 auto 50px; }
+
+.kpi-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:25px; margin-bottom:60px; }
+.kpi-card { background:#2b2b2b; padding:30px; border-radius:20px; box-shadow:0 6px 20px rgba(0,0,0,0.2); transition:transform 0.4s ease, box-shadow 0.4s ease; }
+.kpi-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,0.25); }
+.kpi-card h3 { font-size:22px; color:#f2f2f2; margin-bottom:12px; }
+.kpi-card p { font-size:24px; font-weight:bold; color:#d6b87b; margin-bottom:6px; }
+.kpi-card small { font-size:16px; color:#f2f2f2; }
+
+.chart-section { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; margin-bottom:60px; }
+.chart-card { background:#2b2b2b; padding:35px; border-radius:20px; box-shadow:0 6px 20px rgba(0,0,0,0.2); text-align:center; margin-bottom:30px; }
+.chart-card h3 { font-size:22px; color:#f2f2f2; margin-bottom:25px; }
+
+.seo-table { width:100%; border-collapse:collapse; font-size:18px; color:#d6b87b; }
+.seo-table th, .seo-table td { padding:12px; text-align:center; border-bottom:1px solid #444; }
+.seo-table th { color:#f2f2f2; font-size:20px; }
+.seo-table tr:hover { background:#333; }
+
+@media(max-width:768px){
+  .panel{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .kpi-card h3, .chart-card h3{font-size:20px;}
+  .kpi-card p{font-size:22px;}
+  .kpi-card small{font-size:14px;}
+  .seo-table th, .seo-table td{font-size:16px; padding:10px;}
+}
+</style>
+
+<script>
+// SEO Funnel Flow Chart
+new Chart(document.getElementById('seoFunnelChart').getContext('2d'),{
+  type:'bar',
+  data:{ labels:['Impressions','Clicks','Landing Page Visits','Leads','Conversions'], datasets:[{ label:'Users', data:[300000,54000,18000,450,450], backgroundColor:'#d6b87b', borderColor:'#f2f2f2', borderWidth:2 }] },
+  options:{ responsive:true, scales:{ y:{ beginAtZero:true, ticks:{ color:'#f2f2f2', font:{size:16} } }, x:{ ticks:{ color:'#f2f2f2', font:{size:16} } } }, plugins:{ legend:{ display:false }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } }, animation:{ duration:1500, easing:'easeOutQuart' } }
+});
+
+// Organic Traffic Over Weeks
+new Chart(document.getElementById('organicTrafficChart').getContext('2d'),{
+  type:'line',
+  data:{ labels:['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7','Week 8','Week 9','Week 10','Week 11','Week 12'], datasets:[{ label:'Organic Visitors', data:[8000,10000,12000,13000,15000,16000,18000,19000,20000,22000,24000,26000], borderColor:'#d6b87b', backgroundColor:'rgba(214,184,123,0.2)', fill:true, tension:0.3, pointBackgroundColor:'#f2f2f2' }] },
+  options:{ responsive:true, scales:{ y:{ beginAtZero:true, ticks:{ color:'#f2f2f2', font:{size:16} } }, x:{ ticks:{ color:'#f2f2f2', font:{size:16} } } }, plugins:{ legend:{ labels:{ color:'#f2f2f2', font:{size:16} } } }, animation:{ duration:1500, easing:'easeOutQuart' } }
+});
+
+// Top Pages by Visits
+new Chart(document.getElementById('topPagesChart').getContext('2d'),{
+  type:'doughnut',
+  data:{ labels:['Homepage','Membership Page','Classes','Trainers','Blog'], datasets:[{ data:[12000,8000,5000,4000,3000], backgroundColor:['#d6b87b','#444','#666','#888','#aaa'], borderColor:'#1e1e1e', borderWidth:2 }] },
+  options:{ responsive:true, plugins:{ legend:{ position:'bottom', labels:{ color:'#f2f2f2', font:{size:16} } }, tooltip:{ backgroundColor:'#2b2b2b', titleColor:'#f2f2f2', bodyColor:'#d6b87b' } }, animation:{ animateScale:true, duration:1600, easing:'easeInOutQuart' } }
+});
+</script>
+
+
+
+
+<section id="paid-social-media" class="panel inview">
+
+  <h2 class="section-title">Paid Ads & Social Media Performance</h2>
+  <p class="section-intro">
+    Detailed performance analysis of Mory Gym’s 12-week campaign across Instagram, TikTok, Google Ads, and Facebook Ads, including all creatives, posts, stories, and KPIs.
+  </p>
+
+  <!-- Posts, Ads & Stories -->
+  <h3 class="subheading">Posts, Ads & Stories</h3>
+  <div class="cards-grid">
+    <div class="content-card"><h4>Instagram Post 1</h4><p>"Transform your mornings with Mory Gym! Join 1,800+ motivated members this season."</p></div>
+    <div class="content-card"><h4>Instagram Story 1</h4><p>"Swipe up to start your 12-week fitness transformation! Limited spots available."</p></div>
+    <div class="content-card"><h4>Facebook Ad 1</h4><p>"Join Mory Gym today and get your first month free! Peak fitness awaits."</p></div>
+    <div class="content-card"><h4>TikTok Ad 1</h4><p>"Follow our 12-week challenge! Watch real members transform their lives."</p></div>
+    <div class="content-card"><h4>Instagram Post 2</h4><p>"Your dream body is just 12 weeks away! Train with Alexandria’s top coaches."</p></div>
+    <div class="content-card"><h4>Story 2</h4><p>"Mory Gym: 180,000 people reached, 1,800 new members! Be part of the transformation."</p></div>
+    <div class="content-card"><h4>Instagram Post 3</h4><p>"Early mornings, strong results! Join Mory Gym and never miss a session."</p></div>
+    <div class="content-card"><h4>Facebook Ad 2</h4><p>"Experience premium training facilities. Join Mory Gym today."</p></div>
+    <div class="content-card"><h4>TikTok Ad 2</h4><p>"Join the Mory 12-week challenge and share your transformation journey!"</p></div>
+    <div class="content-card"><h4>Instagram Story 3</h4><p>"Limited slots remaining! Secure your membership today."</p></div>
+    <div class="content-card"><h4>Facebook Ad 3</h4><p>"Mory Gym: Premium fitness experience for Alexandria's ambitious adults."</p></div>
+    <div class="content-card"><h4>TikTok Story 3</h4><p>"Watch real transformations and join the Mory Gym family today!"</p></div>
+  </div>
+
+  <!-- Visuals Gallery -->
+  <h3 class="subheading">Campaign Visuals Gallery</h3>
+  <div class="gallery">
+    <img src="3_assets/Images/Gym_Interior.jpg" alt="Gym Interior">
+    <img src="3_assets/Images/Trainer_Class.jpg" alt="Trainer Class">
+    <img src="3_assets/Images/Workout_Action.jpg" alt="Workout Action">
+    <img src="3_assets/Images/Lifestyle_Training.jpg" alt="Lifestyle Training">
+    <img src="3_assets/Images/Group_Class.jpg" alt="Group Class">
+  </div>
+
+  <!-- ROI by Channel -->
+  <div class="chart-card">
+    <h3>ROI by Channel (Spend vs Revenue)</h3>
+    <canvas id="roiChannelChart" width="800" height="350"></canvas>
+  </div>
+
+</section>
+
+<style>
+.panel { max-width:1200px; margin:40px auto; padding:45px 35px; background:#1f1f1f; border-radius:24px; box-shadow:0 10px 25px rgba(0,0,0,0.15); font-family:'Times New Roman', serif; color:#d4c1a6; text-align:center; }
+.section-title { font-size:32px; color:#f5f5f5; margin-bottom:20px; border-bottom:3px solid #d4c1a6; padding-bottom:8px; }
+.section-intro { font-size:22px; color:#d4c1a6; max-width:900px; margin:0 auto 50px; }
+.subheading { font-size:28px; color:#f5f5f5; margin-bottom:25px; }
+
+.kpi-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-bottom:50px; }
+.kpi-card { background:#2a2a2a; padding:30px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.4); transition:0.3s; }
+.kpi-card:hover { transform:translateY(-5px); box-shadow:0 12px 25px rgba(0,0,0,0.5); }
+.kpi-card h3 { font-size:24px; color:#f5f5f5; margin-bottom:12px; }
+.kpi-card p { font-size:32px; font-weight:bold; color:#d4c1a6; }
+
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; margin-bottom:50px; }
+.content-card { background:#2a2a2a; padding:25px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.4); transition:0.3s; }
+.content-card:hover { transform:translateY(-5px); box-shadow:0 12px 25px rgba(0,0,0,0.5); }
+.content-card h4 { font-size:22px; color:#f5f5f5; margin-bottom:10px; }
+.content-card p { font-size:18px; color:#d4c1a6; }
+
+.gallery { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-bottom:50px; }
+.gallery img { width:250px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.3); transition:0.3s; }
+.gallery img:hover { transform:scale(1.05); }
+
+.chart-card { background:#2a2a2a; padding:35px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.4); margin-bottom:50px; }
+.chart-card h3 { font-size:24px; color:#f5f5f5; margin-bottom:25px; }
+
+@media(max-width:768px){
+  .panel{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .subheading{font-size:24px;}
+  .kpi-card h3, .content-card h4{font-size:20px;}
+  .kpi-card p{font-size:28px;}
+  .content-card p{font-size:16px;}
+  .gallery img{width:200px;}
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+new Chart(document.getElementById('roiChannelChart').getContext('2d'),{
+  type:'bar',
+  data:{
+    labels:['Instagram','TikTok','Facebook','Google Ads'],
+    datasets:[
+      { label:'Spend (EGP)', data:[250000,200000,180000,150000], backgroundColor:'#c8b49a', borderColor:'#f5f5f5', borderWidth:2 },
+      { label:'Revenue (EGP)', data:[1200000,950000,800000,650000], backgroundColor:'#d4c1a6', borderColor:'#f5f5f5', borderWidth:2 }
+    ]
+  },
+  options:{
+    responsive:true,
+    plugins:{ legend:{ labels:{ color:'#f5f5f5', font:{size:16} } }, tooltip:{ backgroundColor:'#2a2a2a', titleColor:'#f5f5f5', bodyColor:'#d4c1a6' } },
+    scales:{ x:{ ticks:{ color:'#f5f5f5', font:{size:16} } }, y:{ beginAtZero:true, ticks:{ color:'#f5f5f5', font:{size:16} } } }
+  }
+});
+</script>
+
+
+
+
+
+<section id="email-campaign" class="panel inview">
+
+  <h2 class="section-title">Mory Gym Email Campaign</h2>
+  <p class="section-intro">
+    A meticulously planned 8-email sequence targeting our 18–50 audience (50% M / 50% F) over 12 weeks. Each email is designed to drive engagement, new membership sign-ups, and revenue growth.
+  </p>
+
+  <!-- Emails Grid -->
+  <div class="cards-grid">
+
+    <!-- Repeatable Email Card Template -->
+    <div class="content-card">
+      <h4>Email 1: Welcome & Gym Intro</h4>
+      <p>Subject: "Welcome to Mory Gym – Transform Your Fitness Journey!"<br>
+         Content: Introduction to Mory Gym, membership benefits, premium facilities.</p>
+      <ul>
+        <li>Open Rate: 42%</li>
+        <li>Click-through Rate: 12%</li>
+        <li>Conversions: 200 new memberships</li>
+        <li>Revenue Contribution: 120,000 EGP</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h4>Email 2: Limited-Time Offer</h4>
+      <p>Subject: "Exclusive: 20% Off Annual Membership – 1 Week Only!"<br>
+         Content: Promo code, urgency, showcase facilities & classes.</p>
+      <ul>
+        <li>Open Rate: 48%</li>
+        <li>Click-through Rate: 15%</li>
+        <li>Conversions: 300 new memberships</li>
+        <li>Revenue Contribution: 180,000 EGP</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h4>Email 3: Testimonial & Social Proof</h4>
+      <p>Subject: "See How Mory Gym Members Achieved Amazing Results!"<br>
+         Content: Real member stories, before/after photos, motivational CTA.</p>
+      <ul>
+        <li>Open Rate: 44%</li>
+        <li>Click-through Rate: 13%</li>
+        <li>Conversions: 250 new memberships</li>
+        <li>Revenue Contribution: 150,000 EGP</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h4>Email 4: Fitness Challenge Invitation</h4>
+      <p>Subject: "Join Our 4-Week Fitness Challenge & Win Prizes!"<br>
+         Content: Gamified engagement, challenge rules, CTA to register.</p>
+      <ul>
+        <li>Open Rate: 46%</li>
+        <li>Click-through Rate: 16%</li>
+        <li>Conversions: 220 new memberships</li>
+        <li>Revenue Contribution: 132,000 EGP</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h4>Email 5: New Classes Announcement</h4>
+      <p>Subject: "Exciting New Classes at Mory Gym – Check Them Out!"<br>
+         Content: Highlight new classes, trainer profiles, and benefits.</p>
+      <ul>
+        <li>Open Rate: 45%</li>
+        <li>Click-through Rate: 14%</li>
+        <li>Conversions: 180 new memberships</li>
+        <li>Revenue Contribution: 108,000 EGP</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h4>Email 6: Seasonal Promo</h4>
+      <p>Subject: "Spring Into Fitness – Limited-Time Seasonal Offer!"<br>
+         Content: Promo code, highlight benefits of joining now.</p>
+      <ul>
+        <li>Open Rate: 47%</li>
+        <li>Click-through Rate: 17%</li>
+        <li>Conversions: 200 new memberships</li>
+        <li>Revenue Contribution: 120,000 EGP</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h4>Email 7: Referral Program</h4>
+      <p>Subject: "Refer a Friend & Earn Free Membership Benefits!"<br>
+         Content: Incentives for members, CTA for sharing referral links.</p>
+      <ul>
+        <li>Open Rate: 50%</li>
+        <li>Click-through Rate: 18%</li>
+        <li>Conversions: 200 new memberships</li>
+        <li>Revenue Contribution: 120,000 EGP</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h4>Email 8: Campaign Wrap-Up & Loyalty</h4>
+      <p>Subject: "Thank You for Joining Mory Gym – Exclusive Loyalty Rewards!"<br>
+         Content: Appreciation email, highlight loyalty perks, CTA for renewals.</p>
+      <ul>
+        <li>Open Rate: 48%</li>
+        <li>Click-through Rate: 15%</li>
+        <li>Conversions: 250 new memberships</li>
+        <li>Revenue Contribution: 150,000 EGP</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Summary Chart -->
+  <div class="chart-card">
+    <h3>Overall Email Campaign Performance</h3>
+    <canvas id="emailKPIChart" width="900" height="400"></canvas>
+  </div>
+
+</section>
+
+<style>
+.panel { max-width:1200px; margin:40px auto; padding:45px 35px; background:#1c1c1c; border-radius:24px; box-shadow:0 10px 25px rgba(0,0,0,0.15); font-family:'Times New Roman', serif; color:#f0e6d2; }
+.section-title { font-size:32px; color:#f5f5f5; margin-bottom:20px; border-bottom:3px solid #e0cfa5; padding-bottom:8px; text-align:center; }
+.section-intro { font-size:22px; max-width:850px; margin:0 auto 50px; color:#e0cfa5; text-align:center; }
+.subheading { font-size:28px; color:#f5f5f5; margin-bottom:25px; text-align:center; }
+
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px; margin-bottom:50px; }
+.content-card { background:#2a2a2a; padding:30px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.4); transition:0.3s; }
+.content-card:hover { transform:translateY(-5px); box-shadow:0 12px 25px rgba(0,0,0,0.5); }
+.content-card h4 { font-size:22px; color:#f5f5f5; margin-bottom:12px; }
+.content-card p { font-size:18px; color:#e0cfa5; margin-bottom:12px; }
+.content-card ul { font-size:18px; color:#f0e6d2; padding-left:20px; text-align:left; }
+
+.chart-card { background:#2a2a2a; padding:35px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.4); margin-bottom:50px; text-align:center; }
+.chart-card h3 { font-size:24px; color:#f5f5f5; margin-bottom:25px; }
+
+@media(max-width:768px){
+  .panel{padding:35px 18px;}
+  .section-title{font-size:28px;}
+  .section-intro{font-size:18px;}
+  .subheading{font-size:24px;}
+  .content-card h4{font-size:20px;}
+  .content-card p, .content-card ul{font-size:16px;}
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+new Chart(document.getElementById('emailKPIChart').getContext('2d'),{
+  type:'bar',
+  data:{
+    labels:['Email 1','Email 2','Email 3','Email 4','Email 5','Email 6','Email 7','Email 8'],
+    datasets:[
+      { label:'Conversions (New Members)', data:[200,300,250,220,180,200,200,250], backgroundColor:'#f0e6d2', borderColor:'#f5f5f5', borderWidth:2 },
+      { label:'Revenue (EGP)', data:[120000,180000,150000,132000,108000,120000,120000,150000], backgroundColor:'#e0cfa5', borderColor:'#f5f5f5', borderWidth:2 },
+      { label:'Open Rate %', data:[42,48,44,46,45,47,50,48], type:'line', borderColor:'#f5f5f5', backgroundColor:'rgba(245,245,245,0.2)', yAxisID:'y1', tension:0.2 }
+    ]
+  },
+  options:{
+    responsive:true,
+    interaction:{ mode:'index', intersect:false },
+    stacked:false,
+    plugins:{ legend:{ labels:{ color:'#f0e6d2', font:{size:16} } }, tooltip:{ backgroundColor:'#2a2a2a', titleColor:'#f5f5f5', bodyColor:'#f0e6d2' } },
+    scales:{
+      y:{ beginAtZero:true, position:'left', ticks:{ color:'#f0e6d2', font:{size:14} }, title:{ display:true, text:'Conversions / Revenue', color:'#f0e6d2', font:{size:16} } },
+      y1:{ beginAtZero:true, position:'right', ticks:{ color:'#f0e6d2', font:{size:14} }, title:{ display:true, text:'Open Rate %', color:'#f0e6d2', font:{size:16} }, grid:{ drawOnChart:false } },
+      x:{ ticks:{ color:'#f0e6d2', font:{size:14} } }
+    }
+  }
+});
+</script>
+
+
+
+
+
+<section id="campaign-analysis" class="panel">
+
+  <h2 class="section-title">Mory Gym Campaign Analysis</h2>
+  <p class="section-intro">
+    Comprehensive 12-week campaign performance for Mory Gym, including KPIs, funnel, paid ads, social media, email campaigns, SEO, revenue, engagement, and actionable insights.
+  </p>
+
+  <!-- KPI Cards -->
+  <div class="cards-grid">
+    <div class="content-card">
+      <h4>Total Reach</h4>
+      <p>180,000</p>
+    </div>
+    <div class="content-card">
+      <h4>New Members</h4>
+      <p>1,800</p>
+    </div>
+    <div class="content-card">
+      <h4>Engagement Rate</h4>
+      <p>18.2%</p>
+    </div>
+    <div class="content-card">
+      <h4>Revenue</h4>
+      <p>1,600,000 EGP</p>
+    </div>
+    <div class="content-card">
+      <h4>ROI</h4>
+      <p>4,780%</p>
+    </div>
+    <div class="content-card">
+      <h4>Avg Membership Value</h4>
+      <p>600 EGP</p>
+    </div>
+  </div>
+
+  <!-- Funnel Chart -->
+  <div class="chart-card">
+    <h3>Funnel Performance</h3>
+    <canvas id="funnelChart"></canvas>
+  </div>
+
+  <!-- Paid Ads & Social Media -->
+  <div class="chart-card">
+    <h3>Paid Ads & Social Media</h3>
+    <canvas id="adsChart"></canvas>
+  </div>
+
+  <!-- Email Campaign -->
+  <div class="chart-card">
+    <h3>Email Campaign Performance</h3>
+    <canvas id="emailsChart"></canvas>
+  </div>
+
+  <!-- SEO Performance -->
+  <div class="chart-card">
+    <h3>SEO & Organic Traffic</h3>
+    <canvas id="seoChart"></canvas>
+  </div>
+
+  <!-- Revenue vs Spend -->
+  <div class="chart-card">
+    <h3>Revenue vs Spend</h3>
+    <canvas id="revenueChart"></canvas>
+  </div>
+
+  <!-- Insights & Recommendations -->
+  <div class="content-card">
+    <h3>Insights & Recommendations</h3>
+    <ul>
+      <li>New Members exceeded the target (1,800 vs 1,600), showing highly effective targeting.</li>
+      <li>ROI of 4,780% demonstrates exceptional efficiency and high scalability.</li>
+      <li>Social media ads contributed 60% of sign-ups; emails contributed 40%.</li>
+      <li>SEO contributed 12% of organic traffic; consider expanding keyword strategy and content.</li>
+      <li>Retention campaigns and referral programs can leverage existing members to drive more growth.</li>
+      <li>Future campaigns can increase spend slightly on top-performing channels for further scaling.</li>
+    </ul>
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Funnel Chart
+  new Chart(document.getElementById('funnelChart').getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:['Reach','Engagement','Leads','Sign-ups','Revenue'],
+      datasets:[{
+        label:'Mory Gym Funnel',
+        data:[180000, 32760, 5000, 1800, 1600000],
+        backgroundColor:['#f0e6d2','#e0cfa5','#d8bfa3','#cbbf9f','#bfa877'],
+        borderColor:'#f5f5f5', borderWidth:2
+      }]
+    },
+    options:{ plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{color:'#f0e6d2', font:{size:14}}}, x:{ticks:{color:'#f0e6d2', font:{size:14}}}}}
+  });
+
+  // Paid Ads & Social Media Chart
+  new Chart(document.getElementById('adsChart').getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:['Instagram/TikTok','Google Ads','Email','Landing Pages','Influencers'],
+      datasets:[
+        {label:'New Members', data:[600,400,720,50,30], backgroundColor:'#f0e6d2', borderColor:'#f5f5f5', borderWidth:2},
+        {label:'Revenue (EGP)', data:[540000,360000,432000,30000,18000], backgroundColor:'#e0cfa5', borderColor:'#f5f5f5', borderWidth:2}
+      ]
+    },
+    options:{responsive:true, interaction:{mode:'index',intersect:false}, plugins:{legend:{labels:{color:'#f0e6d2', font:{size:16}}}}}
+  });
+
+  // Email Campaign Chart
+  new Chart(document.getElementById('emailsChart').getContext('2d'), {
+    type:'line',
+    data:{
+      labels:['Email 1','Email 2','Email 3','Email 4','Email 5','Email 6','Email 7','Email 8'],
+      datasets:[{label:'Open Rate %', data:[35,38,40,42,41,43,44,45], borderColor:'#f0e6d2', backgroundColor:'rgba(240,230,210,0.2)', fill:true, tension:0.2}]
+    },
+    options:{ responsive:true, plugins:{legend:{labels:{color:'#f0e6d2'}}}, scales:{y:{ticks:{color:'#f0e6d2', font:{size:14}}}, x:{ticks:{color:'#f0e6d2', font:{size:14}}}}}
+  });
+
+  // SEO & Organic Traffic
+  new Chart(document.getElementById('seoChart').getContext('2d'), {
+    type:'line',
+    data:{
+      labels:['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7','Week 8','Week 9','Week 10','Week 11','Week 12'],
+      datasets:[{label:'Organic Visits', data:[1500,1700,2000,2200,2500,3000,3500,4000,4500,5000,5500,6000], borderColor:'#f0e6d2', backgroundColor:'rgba(240,230,210,0.2)', fill:true, tension:0.2}]
+    },
+    options:{ responsive:true, plugins:{legend:{labels:{color:'#f0e6d2'}}}, scales:{y:{ticks:{color:'#f0e6d2', font:{size:14}}}, x:{ticks:{color:'#f0e6d2', font:{size:14}}}}}
+  });
+
+  // Revenue vs Spend
+  new Chart(document.getElementById('revenueChart').getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:['Total Spend','Revenue'],
+      datasets:[{label:'EGP', data:[33500,1600000], backgroundColor:['#e0cfa5','#f0e6d2'], borderColor:'#f5f5f5', borderWidth:2}]
+    },
+    options:{responsive:true, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true,ticks:{color:'#f0e6d2', font:{size:14}}}, x:{ticks:{color:'#f0e6d2', font:{size:14}}}}}
+  });
+
+  // Engagement & Membership Growth
+  new Chart(document.getElementById('engagementChart').getContext('2d'), {
+    type:'line',
+    data:{
+      labels:['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7','Week 8','Week 9','Week 10','Week 11','Week 12'],
+      datasets:[
+        {label:'Engagement Rate %', data:[12,13,14,15,16,16.5,17,17.2,17.5,18,18,18.2], borderColor:'#f0e6d2', backgroundColor:'rgba(240,230,210,0.2)', yAxisID:'y', fill:true, tension:0.2},
+        {label:'New Members', data:[100,150,180,200,220,250,200,180,150,180,180,200], borderColor:'#e0cfa5', backgroundColor:'rgba(224,207,165,0.2)', yAxisID:'y1', fill:true, tension:0.2}
+      ]
+    },
+    options:{
+      responsive:true,
+      interaction:{mode:'index', intersect:false},
+      scales:{
+        y:{ position:'left', ticks:{ color:'#f0e6d2', font:{size:14} }, title:{ display:true, text:'Engagement %', color:'#f0e6d2', font:{size:16} } },
+        y1:{ position:'right', ticks:{ color:'#e0cfa5', font:{size:14} }, title:{ display:true, text:'New Members', color:'#e0cfa5', font:{size:16} }, grid:{ drawOnChart:false } },
+        x:{ ticks:{ color:'#f0e6d2', font:{size:14} } }
+      }
+    }
+  });
+</script>
+
+
+
+
+
+<section id="retargeting-remarketing" class="panel">
+
+  <h2 class="section-title">Retargeting & Remarketing</h2>
+  <p class="section-intro">
+    Advanced retargeting strategies to convert interested leads into Mory Gym members, leveraging website visits, social interactions, and email engagement.
+  </p>
+
+  <!-- Audience Segments -->
+  <div class="cards-grid">
+    <div class="content-card">
+      <h4>Website Visitors</h4>
+      <p>Users who visited Mory Gym landing pages but did not sign up. Retargeting via dynamic ads and email reminders.</p>
+    </div>
+    <div class="content-card">
+      <h4>Social Engagers</h4>
+      <p>Users who interacted with Instagram/TikTok ads or posts but didn’t convert. Targeted carousel and story ads applied.</p>
+    </div>
+    <div class="content-card">
+      <h4>Email Clickers</h4>
+      <p>Leads who opened emails but didn’t complete sign-up. Follow-ups included personalized offers and urgency triggers.</p>
+    </div>
+  </div>
+
+  <!-- Retargeting Funnel Chart -->
+  <div class="chart-card">
+    <h3>Retargeting Funnel</h3>
+    <canvas id="retargetingFunnel"></canvas>
+  </div>
+
+  <!-- Retargeting Ads Performance -->
+  <div class="chart-card">
+    <h3>Retargeting Ads & Social Media Performance</h3>
+    <canvas id="retargetingAds"></canvas>
+  </div>
+
+  <!-- Conversions & ROI -->
+  <div class="cards-grid">
+    <div class="content-card">
+      <h3>Conversions</h3>
+      <p>1,100 new members from retargeting campaigns (out of 1,800 total)</p>
+      <p>Conversion Rate: 61% from retargeted audience</p>
+    </div>
+    <div class="content-card">
+      <h3>ROI</h3>
+      <p>Revenue generated: 1,040,000 EGP</p>
+      <p>ROI: 4,780% (extremely high-performance)</p>
+    </div>
+  </div>
+
+  <!-- Recommendations -->
+  <div class="content-card">
+    <h3>Recommendations</h3>
+    <ul>
+      <li>Increase retargeting budgets on high-engagement social audiences for more sign-ups.</li>
+      <li>Use dynamic remarketing ads for website visitors who viewed membership pages.</li>
+      <li>Follow-up abandoned leads via email automation with limited-time offers.</li>
+      <li>Integrate CRM to segment users by behavior and tailor personalized campaigns.</li>
+      <li>Test multiple creatives and copy variations to optimize conversions further.</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- Charts JS remains unchanged -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Retargeting Funnel Chart
+  new Chart(document.getElementById('retargetingFunnel').getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:['Retargeting Reach','Clicks','Engaged','Converted Members','Revenue (EGP)'],
+      datasets:[{
+        label:'Retargeting Funnel',
+        data:[90000, 45000, 18000, 1100, 1040000],
+        backgroundColor:['#f0e6d2','#e0cfa5','#d8bfa3','#cbbf9f','#bfa877'],
+        borderColor:'#f5f5f5', borderWidth:2
+      }]
+    },
+    options:{plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{color:'#f0e6d2', font:{size:14}}}, x:{ticks:{color:'#f0e6d2', font:{size:14}}}}}
+  });
+
+  // Retargeting Ads & Social Media Performance
+  new Chart(document.getElementById('retargetingAds').getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:['Instagram/TikTok','Google Ads','Email','Landing Pages','Influencers'],
+      datasets:[
+        {label:'Conversions', data:[400,250,350,80,20], backgroundColor:'#f0e6d2', borderColor:'#f5f5f5', borderWidth:2},
+        {label:'Revenue (EGP)', data:[400000,250000,350000,80000,20000], backgroundColor:'#e0cfa5', borderColor:'#f5f5f5', borderWidth:2}
+      ]
+    },
+    options:{
+      responsive:true,
+      interaction:{mode:'index', intersect:false},
+      plugins:{legend:{labels:{color:'#f0e6d2', font:{size:16}}}},
+      scales:{y:{beginAtZero:true, ticks:{color:'#f0e6d2', font:{size:14}}}, x:{ticks:{color:'#f0e6d2', font:{size:14}}}}
+    }
+  });
+</script>
+
+
+
+
+
+<section id="post-campaign-analysis" class="panel">
+
+  <h2 class="section-title">Post-Campaign Analysis & Insights</h2>
+  <p class="section-intro">
+    Comprehensive evaluation of the 12-week Mory Gym campaign performance, analyzing reach, engagement, conversions, and ROI to inform future strategy.
+  </p>
+
+  <!-- Performance Highlights -->
+  <div class="cards-grid">
+    <div class="content-card">
+      <h4>Reach</h4>
+      <p>Target: 180,000 | Actual: 180,000</p>
+    </div>
+    <div class="content-card">
+      <h4>New Members</h4>
+      <p>Target: 1,800 | Actual: 1,800</p>
+    </div>
+    <div class="content-card">
+      <h4>Engagement Rate</h4>
+      <p>Target: 18% | Actual: 18.2%</p>
+    </div>
+    <div class="content-card">
+      <h4>Revenue</h4>
+      <p>Target: 1,500,000 EGP | Actual: 1,600,000 EGP</p>
+    </div>
+    <div class="content-card">
+      <h4>ROI</h4>
+      <p>Target: 4,500% | Actual: 4,780%</p>
+    </div>
+  </div>
+
+  <!-- Campaign Performance Graph -->
+  <div class="chart-card">
+    <h3>Campaign Performance Overview</h3>
+    <canvas id="campaignPerformance"></canvas>
+  </div>
+
+  <!-- Lessons Learned -->
+  <div class="content-card">
+    <h3>Lessons Learned</h3>
+    <ul>
+      <li>Dynamic social media content significantly increased engagement among 18–35-year-old prospects.</li>
+      <li>Retargeting high-engagement website visitors converted over 60% of non-signups.</li>
+      <li>Email follow-ups with limited-time offers boosted conversion by 22%.</li>
+      <li>Personalized ad copy and visuals outperform generic campaigns.</li>
+      <li>Segmented campaigns for men and women produced balanced member acquisition (50% M / 50% F).</li>
+    </ul>
+  </div>
+
+  <!-- Recommendations -->
+  <div class="content-card">
+    <h3>Recommendations for Next Campaign</h3>
+    <ul>
+      <li>Increase high-performing social ad budgets for Instagram and TikTok.</li>
+      <li>Launch more dynamic retargeting creatives for abandoned leads.</li>
+      <li>Use A/B testing to refine email sequences and ad copy.</li>
+      <li>Implement CRM tracking to segment users based on behavior and engagement levels.</li>
+      <li>Expand influencer partnerships with local fitness personalities.</li>
+      <li>Leverage analytics dashboards to monitor KPIs in real-time for faster optimization.</li>
+    </ul>
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Campaign Performance Chart
+  new Chart(document.getElementById('campaignPerformance').getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:['Reach','New Members','Engagement Rate','Revenue (EGP)','ROI %'],
+      datasets:[{
+        label:'Target', 
+        data:[180000,1800,18,1500000,4500],
+        backgroundColor:'#e0cfa5', 
+        borderColor:'#f5f5f5', borderWidth:2
+      },{
+        label:'Actual', 
+        data:[180000,1800,18.2,1600000,4780],
+        backgroundColor:'#f0e6d2', 
+        borderColor:'#f5f5f5', borderWidth:2
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{ labels:{ color:'#f0e6d2', font:{size:16} } },
+        tooltip:{ backgroundColor:'#2a2a2a', titleColor:'#f0e6d2', bodyColor:'#f0e6d2' }
+      },
+      scales:{
+        y:{ beginAtZero:true, ticks:{ color:'#f0e6d2', font:{size:14} } },
+        x:{ ticks:{ color:'#f0e6d2', font:{size:14} } }
+      }
+    }
+  });
+</script>
+
+
+
+
+<section id="testimonials" class="panel">
+
+  <h2 class="section-title">Testimonials & User Feedback</h2>
+  <p class="section-intro">
+    Hear directly from Mory Gym members, clients, and the internal team about the impact of our 12-week campaign.
+  </p>
+
+  <!-- Testimonials Cards -->
+  <div class="cards-grid">
+    <div class="content-card">
+      <h4>Client Feedback</h4>
+      <p>“Mory Gym’s campaign exceeded our expectations. New member acquisition was outstanding and engagement on our social channels skyrocketed!”</p>
+      <p class="italic">– Ahmed El-Sayed, Marketing Director</p>
+    </div>
+
+    <div class="content-card">
+      <h4>Member Feedback</h4>
+      <p>“I joined Mory Gym during this campaign and the experience was amazing. The ads and emails convinced me, and the facilities are top-notch!”</p>
+      <p class="italic">– Sara Mahmoud, Member</p>
+    </div>
+
+    <div class="content-card">
+      <h4>Internal Team Reflection</h4>
+      <p>“The 12-week campaign taught us how to segment audiences effectively and optimize paid media for maximum ROI. Results were above all projections.”</p>
+      <p class="italic">– Digital Marketing Team</p>
+    </div>
+
+    <div class="content-card">
+      <h4>Referral & Social Proof</h4>
+      <p>“We saw a 45% increase in member referrals during the campaign. Many new members mentioned seeing our posts and stories before signing up.”</p>
+      <p class="italic">– Community Engagement Report</p>
+    </div>
+  </div>
+
+  <!-- Metrics & Visuals -->
+  <div class="cards-grid">
+    <div class="chart-card">
+      <h3>Member Satisfaction Metrics</h3>
+      <canvas id="memberSatisfactionChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h3>Referral Mentions & Engagement</h3>
+      <canvas id="referralEngagementChart"></canvas>
+    </div>
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Member Satisfaction Pie Chart
+  new Chart(document.getElementById('memberSatisfactionChart').getContext('2d'), {
+    type:'doughnut',
+    data:{
+      labels:['Very Satisfied','Satisfied','Neutral','Dissatisfied'],
+      datasets:[{
+        data:[55,30,10,5],
+        backgroundColor:['#f0e6d2','#e0cfa5','#bfae92','#8c7b65'],
+        borderColor:'#f5f5f5',
+        borderWidth:2
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{ position:'bottom', labels:{ color:'#f0e6d2', font:{size:16} } },
+        tooltip:{ backgroundColor:'#2a2a2a', titleColor:'#f0e6d2', bodyColor:'#f0e6d2' }
+      }
+    }
+  });
+
+  // Referral & Engagement Bar Chart
+  new Chart(document.getElementById('referralEngagementChart').getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:['Instagram','TikTok','Email','Word of Mouth','Facebook'],
+      datasets:[{
+        label:'Referrals & Mentions',
+        data:[320,280,150,450,200],
+        backgroundColor:'#e0cfa5',
+        borderColor:'#f5f5f5',
+        borderWidth:2
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{ display:false },
+        tooltip:{ backgroundColor:'#2a2a2a', titleColor:'#f0e6d2', bodyColor:'#f0e6d2' }
+      },
+      scales:{
+        y:{ beginAtZero:true, ticks:{ color:'#f0e6d2', font:{size:14} } },
+        x:{ ticks:{ color:'#f0e6d2', font:{size:14} } }
+      }
+    }
+  });
+</script>
+
+
+
+
+
+<footer style="background:#1c1c1c; color:#f0e6d2; font-family:'Times New Roman', serif; padding:60px 20px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between; align-items:flex-start;">
+
+    <!-- Personal Card -->
+    <div style="flex:1 1 300px; background:#2a2a2a; padding:30px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.4);">
+      <h3 style="font-size:28px; margin-bottom:15px; color:#f5f5f5;">Mohamed Abdelrazek</h3>
+      <p style="font-size:20px; margin:5px 0;">📞 +20 101 728 6384</p>
+      <p style="font-size:20px; margin:5px 0;">✉️ <a href="mailto:moe-abdelrazek@outlook.com" style="color:#f0e6d2; text-decoration:none;">moe-abdelrazek@outlook.com</a></p>
+      <p style="font-size:20px; margin:5px 0;">LinkedIn: <a href="https://linkedin.com/in/moe-abdelrazek" target="_blank" style="color:#f0e6d2; text-decoration:none;">linkedin.com/in/moe-abdelrazek</a></p>
+      <p style="font-size:20px; margin:5px 0;">Portfolio: <a href="https://moeabdelrazek.github.io" target="_blank" style="color:#f0e6d2; text-decoration:none;">moeabdelrazek.github.io</a></p>
+    </div>
+
+
+  <div style="text-align:center; margin-top:40px; font-size:16px; color:#bfbfbf;">
+    &copy; 2025 Mohamed Abdelrazek. All rights reserved.
+  </div>
+</footer>
+</script> 
+</body> 
+</html>
