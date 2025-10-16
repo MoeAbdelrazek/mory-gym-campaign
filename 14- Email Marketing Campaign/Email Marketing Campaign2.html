@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mory Gym Email Campaign — Visual Performance Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body {
+  font-family:'Times New Roman',serif;
+  color:#5a3e36;
+  background:linear-gradient(145deg,#fdf5ed,#fceedd);
+  padding:60px;
+}
+section {
+  max-width:1200px;
+  margin:auto;
+  background:#fff7f0;
+  border-radius:20px;
+  padding:50px 60px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+h1 {
+  font-size:34px;
+  text-align:center;
+  border-bottom:3px solid #cbb292;
+  padding-bottom:10px;
+  margin-bottom:40px;
+}
+h2 {
+  font-size:26px;
+  border-bottom:2px solid #d6b87b;
+  padding-bottom:6px;
+  margin-top:40px;
+}
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  margin:30px 0 50px;
+}
+.card {
+  background:#2d2a26;
+  color:#fceedd;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.25);
+  text-align:center;
+  transition:transform .3s;
+}
+.card:hover { transform:scale(1.03); }
+.card h3 { font-size:22px; margin-bottom:10px; }
+.card p { font-size:20px; font-weight:bold; }
+.chart-container {
+  background:#fff7f0;
+  border-radius:20px;
+  padding:30px;
+  box-shadow:inset 0 0 10px rgba(0,0,0,0.05);
+  margin-top:40px;
+}
+canvas { width:100%!important; height:380px!important; }
+.line { border-bottom:3px solid #cbb292; margin:50px 0; }
+</style>
+</head>
+<body>
+
+<section>
+  <h1>Mory Gym Email Campaign — Visual Performance Dashboard</h1>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Total New Members</h3>
+      <p>1,800</p>
+    </div>
+    <div class="card">
+      <h3>Total Revenue</h3>
+      <p>1,080,000 EGP</p>
+    </div>
+    <div class="card">
+      <h3>Avg Open Rate</h3>
+      <p>46.25 %</p>
+    </div>
+    <div class="card">
+      <h3>Avg CTR</h3>
+      <p>15 %</p>
+    </div>
+    <div class="card">
+      <h3>Avg Conversion Rate</h3>
+      <p>12 %</p>
+    </div>
+  </div>
+
+  <div class="line"></div>
+  <h2>Open Rate vs CTR Per Email</h2>
+  <div class="chart-container">
+    <canvas id="openCtrChart"></canvas>
+  </div>
+
+  <div class="line"></div>
+  <h2>Revenue Generated Per Email</h2>
+  <div class="chart-container">
+    <canvas id="revenueChart"></canvas>
+  </div>
+
+  <div class="line"></div>
+  <h2>Conversions and Performance Summary</h2>
+  <div class="chart-container">
+    <canvas id="conversionChart"></canvas>
+  </div>
+</section>
+
+<script>
+// ===== Open Rate vs CTR =====
+const ctx1 = document.getElementById('openCtrChart');
+new Chart(ctx1, {
+  type:'bar',
+  data:{
+    labels:['Email 1','Email 2','Email 3','Email 4','Email 5','Email 6','Email 7','Email 8'],
+    datasets:[
+      {
+        label:'Open Rate (%)',
+        data:[42,48,44,46,45,47,50,48],
+        backgroundColor:'rgba(96,80,60,0.8)'
+      },
+      {
+        label:'CTR (%)',
+        data:[12,15,13,16,14,17,18,15],
+        backgroundColor:'rgba(201,166,110,0.9)'
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    plugins:{
+      legend:{labels:{color:'#5a3e36'}},
+      title:{display:true,text:'Engagement Comparison',color:'#5a3e36',font:{size:20}}
+    },
+    scales:{
+      x:{ticks:{color:'#5a3e36'}},
+      y:{ticks:{color:'#5a3e36'},beginAtZero:true}
+    }
+  }
+});
+
+// ===== Revenue per Email =====
+const ctx2 = document.getElementById('revenueChart');
+new Chart(ctx2, {
+  type:'line',
+  data:{
+    labels:['Email 1','Email 2','Email 3','Email 4','Email 5','Email 6','Email 7','Email 8'],
+    datasets:[{
+      label:'Revenue (EGP)',
+      data:[120000,180000,150000,132000,108000,120000,120000,150000],
+      borderColor:'#2d2a26',
+      backgroundColor:'rgba(45,42,38,0.3)',
+      fill:true,
+      tension:0.4
+    }]
+  },
+  options:{
+    plugins:{
+      legend:{labels:{color:'#5a3e36'}},
+      title:{display:true,text:'Revenue Progression',color:'#5a3e36',font:{size:20}}
+    },
+    scales:{
+      x:{ticks:{color:'#5a3e36'}},
+      y:{ticks:{color:'#5a3e36'},beginAtZero:true}
+    }
+  }
+});
+
+// ===== Conversion Overview =====
+const ctx3 = document.getElementById('conversionChart');
+new Chart(ctx3, {
+  type:'doughnut',
+  data:{
+    labels:['Open Rate','CTR','Conversion Rate'],
+    datasets:[{
+      data:[46.25,15,12],
+      backgroundColor:['#5a3e36','#d6b87b','#cbb292'],
+      hoverOffset:8
+    }]
+  },
+  options:{
+    plugins:{
+      legend:{position:'bottom',labels:{color:'#5a3e36'}},
+      title:{display:true,text:'Overall Performance Distribution',color:'#5a3e36',font:{size:20}}
+    }
+  }
+});
+</script>
+</body>
+</html>

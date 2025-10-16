@@ -1,276 +1,155 @@
-<section id="campaign-analysis">
-  <h2 class="section-title">Comprehensive Campaign Analysis & A/B Testing Results</h2>
-  <p class="section-intro">
-    An in-depth performance breakdown of Haksoss Café’s digital marketing campaign, featuring data visualization across channels, ROI impact, audience behavior, and A/B testing outcomes.
-  </p>
-
-  <!-- Summary Metrics -->
-  <div class="metrics-summary">
-    <div class="metric-box">
-      <h3>Overall ROI</h3>
-      <p>+311%</p>
-    </div>
-    <div class="metric-box">
-      <h3>Average CTR</h3>
-      <p>6.2%</p>
-    </div>
-    <div class="metric-box">
-      <h3>Conversion Rate</h3>
-      <p>5.8%</p>
-    </div>
-    <div class="metric-box">
-      <h3>Engagement Rate</h3>
-      <p>11.3%</p>
-    </div>
-  </div>
-
-  <!-- Performance Charts -->
-  <div class="analysis-charts">
-    <div class="chart-card">
-      <h4>Channel Performance Overview</h4>
-      <canvas id="channelPerformance" height="130"></canvas>
-    </div>
-    <div class="chart-card">
-      <h4>Audience Behavior Insights</h4>
-      <canvas id="audienceBehavior" height="130"></canvas>
-    </div>
-  </div>
-
-  <!-- Conversion Funnel -->
-  <div class="chart-card wide">
-    <h4>Conversion Funnel Breakdown</h4>
-    <canvas id="conversionFunnel" height="150"></canvas>
-  </div>
-
-  <!-- A/B Testing Section -->
-  <div class="ab-testing">
-    <h3 class="subheading">A/B Testing Results Summary</h3>
-    <p>
-      Multiple A/B tests were conducted on creatives, subject lines, and CTAs to optimize engagement and conversions. Insights below highlight performance variations and winning combinations.
-    </p>
-
-    <div class="ab-cards">
-      <div class="ab-card">
-        <h4>Email Subject Line Test</h4>
-        <ul>
-          <li><strong>Variant A:</strong> "Wake Up to the Hero Latte" — 24% open rate</li>
-          <li><strong>Variant B:</strong> "Your Morning Ritual Awaits ☕" — <span class="highlight">27.8% open rate (Winner)</span></li>
-        </ul>
-      </div>
-
-      <div class="ab-card">
-        <h4>Ad Creative Test</h4>
-        <ul>
-          <li><strong>Variant A:</strong> Hero Image + Static Text — 5.1% CTR</li>
-          <li><strong>Variant B:</strong> Animated Latte Pour + CTA "Sip the Legend" — <span class="highlight">6.7% CTR (Winner)</span></li>
-        </ul>
-      </div>
-
-      <div class="ab-card">
-        <h4>CTA Language Test</h4>
-        <ul>
-          <li><strong>Variant A:</strong> “Order Now” — 4.9% Conversion</li>
-          <li><strong>Variant B:</strong> “Join the Ritual” — <span class="highlight">5.8% Conversion (Winner)</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- AB Test Visualization -->
-    <div class="chart-card">
-      <h4>A/B Test Performance Comparison</h4>
-      <canvas id="abTestResults" height="130"></canvas>
-    </div>
-  </div>
-
-  <!-- Performance Radar -->
-  <div class="chart-card wide">
-    <h4>Performance Balance Radar</h4>
-    <canvas id="performanceRadar" height="150"></canvas>
-  </div>
-</section>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mory Gym Campaign Analysis</title>
 <style>
-#campaign-analysis {
-  border-radius: 20px;
-  padding: 60px 40px;
-  margin: 70px auto;
-  background: linear-gradient(145deg, #fdf5ed, #fceedd);
-  max-width: 1250px;
-  font-family: 'Times New Roman', serif;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-  color: #5a3e36;
-}
-
-#campaign-analysis .section-title {
-  text-align: center;
-  font-size: 32px;
-  color: #5a3e36;
-  margin-bottom: 20px;
-}
-#campaign-analysis .section-intro {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 50px;
-  color: #5a3e36;
-}
-
-.metrics-summary {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 50px;
-}
-.metric-box {
-  background: #d6bfa3;
-  border-radius: 20px;
-  padding: 25px 35px;
-  text-align: center;
-  min-width: 180px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-.metric-box h3 {
-  font-size: 22px;
-  color: #5a3e36;
-  margin-bottom: 8px;
-}
-.metric-box p {
-  font-size: 26px;
-  font-weight: bold;
-  color: #8b5e3c;
-}
-
-.analysis-charts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-  margin-bottom: 50px;
-}
-.chart-card {
-  background: #f9ede3;
-  border: 1px solid #d6bfa3;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  text-align: center;
-}
-.chart-card h4 {
-  color: #8b5e3c;
-  margin-bottom: 15px;
-  font-size: 22px;
-}
-.chart-card.wide { margin: 40px auto; }
-
-.ab-testing {
-  margin-top: 60px;
-}
-.ab-testing .subheading {
-  font-size: 26px;
-  color: #5a3e36;
-  margin-bottom: 15px;
-}
-.ab-testing p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #5a3e36;
-}
-
-.ab-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 25px;
-  margin-bottom: 40px;
-}
-.ab-card {
-  background: #d6bfa3;
-  border-radius: 18px;
-  padding: 22px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-.ab-card h4 {
-  color: #5a3e36;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.ab-card ul {
-  padding-left: 20px;
-  line-height: 1.6;
-}
-.highlight {
-  color: #a65f3b;
-  font-weight: bold;
-}
+  body {
+    font-family: 'Times New Roman', serif;
+    background: linear-gradient(145deg, #fdf5ed, #fceedd);
+    color: #5a3e36;
+    padding: 40px;
+    line-height: 1.7;
+  }
+  h1, h2, h3 {
+    text-align: center;
+    color: #5a3e36;
+  }
+  h1 { font-size: 32px; border-bottom: 3px solid #d6b49a; padding-bottom: 10px; }
+  h2 { font-size: 26px; margin-top: 40px; border-bottom: 2px solid #d6b49a; padding-bottom: 6px; }
+  h3 { font-size: 22px; margin-top: 25px; color: #7b5243; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: #fffaf5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  th, td {
+    border: 1px solid #d9b8a3;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 18px;
+  }
+  th { background-color: #f3e2d5; }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+  .content-card {
+    background:#fffaf5;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+  }
+  .divider { margin:50px 0; border-top:3px double #c3a38d; }
 </style>
+</head>
+<body>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Channel Performance Bar Chart
-  new Chart(document.getElementById("channelPerformance").getContext("2d"), {
-    type: "bar",
-    data: {
-      labels: ["Instagram", "Facebook", "Google Ads", "Email", "TikTok"],
-      datasets: [{
-        label: "Engagement Rate (%)",
-        data: [13.2, 10.4, 8.7, 6.9, 11.1],
-        backgroundColor: ["#a65f3b", "#c08054", "#8b5e3c", "#d69a7f", "#f0b189"]
-      }]
-    },
-    options: { responsive: true, plugins: { legend: { position: "bottom" }}, scales: { y: { beginAtZero: true } } }
-  });
+<h1>Mory Gym Campaign Analysis</h1>
 
-  // Audience Behavior Line Chart
-  new Chart(document.getElementById("audienceBehavior").getContext("2d"), {
-    type: "line",
-    data: {
-      labels: ["Week 1","Week 2","Week 3","Week 4","Week 5"],
-      datasets: [
-        { label: "Returning Visitors", data: [1200, 1550, 1780, 1980, 2200], borderColor: "#a65f3b", fill: false, tension: 0.4 },
-        { label: "New Visitors", data: [900, 1150, 1280, 1400, 1600], borderColor: "#d69a7f", fill: false, tension: 0.4 }
-      ]
-    },
-    options: { responsive: true, plugins: { legend: { position: "bottom" } } }
-  });
+<h2>1. Campaign Overview</h2>
+<p>
+This 12-week campaign focused on member acquisition, engagement, retention, and revenue growth. The strategy included targeted email sequences, paid social media ads, SEO optimization, and influencer partnerships. Metrics were tracked across all touchpoints to optimize ROI and inform actionable insights.
+</p>
 
-  // Conversion Funnel Bar Chart
-  new Chart(document.getElementById("conversionFunnel").getContext("2d"), {
-    type: "bar",
-    data: {
-      labels: ["Impressions", "Clicks", "Landing Visits", "Add to Cart", "Purchases"],
-      datasets: [{
-        label: "Users",
-        data: [80800, 5600, 4200, 1800, 1070],
-        backgroundColor: "#a65f3b"
-      }]
-    },
-    options: { responsive: true, plugins: { legend: { display: false }}, scales: { y: { beginAtZero: true } } }
-  });
+<div class="divider"></div>
 
-  // A/B Test Comparison Chart
-  new Chart(document.getElementById("abTestResults").getContext("2d"), {
-    type: "bar",
-    data: {
-      labels: ["Subject Line", "Ad Creative", "CTA Language"],
-      datasets: [
-        { label: "Variant A", data: [24, 5.1, 4.9], backgroundColor: "#d69a7f" },
-        { label: "Variant B", data: [27.8, 6.7, 5.8], backgroundColor: "#a65f3b" }
-      ]
-    },
-    options: { responsive: true, plugins: { legend: { position: "bottom" }}, scales: { y: { beginAtZero: true, title:{ display:true, text:"Performance (%)"} } } }
-  });
+<h2>2. Key Performance Indicators (KPIs)</h2>
+<div class="cards-grid">
+  <div class="content-card"><h3>Total Reach</h3><p>180,000</p></div>
+  <div class="content-card"><h3>New Members</h3><p>1,800</p></div>
+  <div class="content-card"><h3>Engagement Rate</h3><p>18.2%</p></div>
+  <div class="content-card"><h3>Revenue</h3><p>1,600,000 EGP</p></div>
+  <div class="content-card"><h3>ROI</h3><p>4,780%</p></div>
+  <div class="content-card"><h3>Avg Membership Value</h3><p>600 EGP</p></div>
+</div>
 
-  // Performance Radar Chart
-  new Chart(document.getElementById("performanceRadar").getContext("2d"), {
-    type: "radar",
-    data: {
-      labels: ["Engagement", "Reach", "Conversion", "CTR", "ROAS", "Retention"],
-      datasets: [
-        { label: "Target", data: [10, 77000, 5, 5, 3.5, 60], borderColor: "#d69a7f", backgroundColor: "rgba(214,154,127,0.2)" },
-        { label: "Actual", data: [11.3, 80800, 5.8, 6.2, 4.11, 68], borderColor: "#a65f3b", backgroundColor: "rgba(166,95,59,0.3)" }
-      ]
-    },
-    options: { responsive: true, plugins: { legend: { position: "bottom" } } }
-  });
-});
-</script>
+<div class="divider"></div>
 
+<h2>3. Funnel Performance</h2>
+<table>
+  <tr><th>Stage</th><th>Value</th></tr>
+  <tr><td>Reach</td><td>180,000</td></tr>
+  <tr><td>Engagement</td><td>32,760</td></tr>
+  <tr><td>Leads</td><td>5,000</td></tr>
+  <tr><td>Sign-ups</td><td>1,800</td></tr>
+  <tr><td>Revenue</td><td>1,600,000 EGP</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>4. Paid Ads & Social Media</h2>
+<table>
+  <tr><th>Channel</th><th>New Members</th><th>Revenue (EGP)</th></tr>
+  <tr><td>Instagram/TikTok</td><td>600</td><td>540,000</td></tr>
+  <tr><td>Google Ads</td><td>400</td><td>360,000</td></tr>
+  <tr><td>Email</td><td>720</td><td>432,000</td></tr>
+  <tr><td>Landing Pages</td><td>50</td><td>30,000</td></tr>
+  <tr><td>Influencers</td><td>30</td><td>18,000</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>5. Email Campaign Performance</h2>
+<table>
+  <tr><th>Email</th><th>Open Rate %</th></tr>
+  <tr><td>Email 1</td><td>35</td></tr>
+  <tr><td>Email 2</td><td>38</td></tr>
+  <tr><td>Email 3</td><td>40</td></tr>
+  <tr><td>Email 4</td><td>42</td></tr>
+  <tr><td>Email 5</td><td>41</td></tr>
+  <tr><td>Email 6</td><td>43</td></tr>
+  <tr><td>Email 7</td><td>44</td></tr>
+  <tr><td>Email 8</td><td>45</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>6. SEO & Organic Traffic</h2>
+<table>
+  <tr><th>Week</th><th>Organic Visits</th></tr>
+  <tr><td>1</td><td>1,500</td></tr>
+  <tr><td>2</td><td>1,700</td></tr>
+  <tr><td>3</td><td>2,000</td></tr>
+  <tr><td>4</td><td>2,200</td></tr>
+  <tr><td>5</td><td>2,500</td></tr>
+  <tr><td>6</td><td>3,000</td></tr>
+  <tr><td>7</td><td>3,500</td></tr>
+  <tr><td>8</td><td>4,000</td></tr>
+  <tr><td>9</td><td>4,500</td></tr>
+  <tr><td>10</td><td>5,000</td></tr>
+  <tr><td>11</td><td>5,500</td></tr>
+  <tr><td>12</td><td>6,000</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>7. Revenue vs Spend</h2>
+<table>
+  <tr><th>Metric</th><th>Value (EGP)</th></tr>
+  <tr><td>Total Spend</td><td>33,500</td></tr>
+  <tr><td>Total Revenue</td><td>1,600,000</td></tr>
+  <tr><td>ROI</td><td>4,780%</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>8. Insights & Recommendations</h2>
+<ul>
+  <li>New Members exceeded the target (1,800 vs 1,600), showing highly effective targeting.</li>
+  <li>ROI of 4,780% demonstrates exceptional efficiency and scalability.</li>
+  <li>Social media ads contributed 60% of sign-ups; emails contributed 40%.</li>
+  <li>SEO contributed 12% of organic traffic; consider expanding keyword strategy and content.</li>
+  <li>Retention campaigns and referral programs can leverage existing members to drive more growth.</li>
+  <li>Future campaigns can increase spend slightly on top-performing channels for further scaling.</li>
+</ul>
+
+</body>
+</html>

@@ -1,119 +1,138 @@
-<section id="kpis" style="background:linear-gradient(145deg,#fdf5ed,#fceedd); padding:60px 30px; border-radius:20px; font-family:'Times New Roman',serif; color:#5a3e36; box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-  <div class="kpis-container" style="max-width:1200px; margin:0 auto;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gym Campaign KPIs & Performance</title>
+<style>
+body {
+  font-family: 'Times New Roman', serif;
+  background: linear-gradient(145deg, #fdf5ed, #fceedd);
+  color: #5a3e36;
+  padding: 60px;
+  line-height: 1.6;
+}
+h1 {
+  font-size: 32px;
+  text-align: center;
+  border-bottom: 3px solid #d6b87b;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+h2 {
+  font-size: 22px;
+  margin-top: 40px;
+  color: #5a3e36;
+}
+p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+section {
+  background: #fff8f0;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 60px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  font-size: 18px;
+}
+th, td {
+  border: 1px solid #d6b87b;
+  padding: 10px 14px;
+  text-align: center;
+}
+th {
+  background: #f6e9d8;
+}
+.separator {
+  border: none;
+  border-top: 2px solid #d6b87b;
+  margin: 45px 0;
+}
+</style>
+</head>
+<body>
 
-    <h2 style="text-align:center; font-size:32px; color:#8b5e3c; margin-bottom:20px; letter-spacing:1px;">Campaign KPIs & Performance Dashboard</h2>
-    <p style="text-align:center; max-width:900px; margin:0 auto 50px; font-size:20px; line-height:1.8; color:#5a3e36;">
-      Unified view of campaign performance across reach, engagement, CTR, conversions, ROAS, retention, funnel drop-offs, and channel-specific metrics.
-    </p>
+<h1>Gym Campaign KPIs & Performance</h1>
 
-    <div class="kpi-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;">
+<p>Key performance indicators for Mory Gym’s 12-week premium campaign targeting Alexandria’s active and urban professionals.</p>
 
-      <div class="kpi-card" style="background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease;">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">ROAS</h3>
-        <div class="progress-bar" style="width:100%; height:30px; background:#e4d3c2; border-radius:15px; overflow:hidden; margin-bottom:15px;">
-          <div class="progress-fill" data-fill="411%" style="height:100%; width:0; background:linear-gradient(90deg,#ffd27f,#ffb957); color:#5a3e36; font-weight:bold; font-size:18px; line-height:30px; text-align:right; padding-right:12px; border-radius:15px 0 0 15px; transition:width 2s ease;">4.11:1</div>
-        </div>
-        <p style="font-size:18px; color:#5a3e36;">Target: 3.5:1 | Actual: 4.11:1 | ✅ Above Target</p>
-      </div>
+<section>
+  <h2>Top KPIs</h2>
+  <table>
+    <thead>
+      <tr><th>KPI</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Total Reach</td><td>180,000</td></tr>
+      <tr><td>New Members</td><td>1,800</td></tr>
+      <tr><td>Engagement Rate</td><td>18.2%</td></tr>
+      <tr><td>Revenue</td><td>1,600,000 EGP</td></tr>
+      <tr><td>ROI</td><td>4,780%</td></tr>
+      <tr><td>Avg Membership Value</td><td>600 EGP</td></tr>
+    </tbody>
+  </table>
 
-      <div class="kpi-card" style="background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">Loyalty Sign-ups</h3>
-        <div class="progress-bar" style="width:100%; height:30px; background:#e4d3c2; border-radius:15px; overflow:hidden; margin-bottom:15px;">
-          <div class="progress-fill" data-fill="107%" style="height:100%; width:0; background:linear-gradient(90deg,#ffd27f,#ffb957); color:#5a3e36; font-weight:bold; font-size:18px; line-height:30px; text-align:right; padding-right:12px; border-radius:15px 0 0 15px; transition:width 2s ease;">1,070</div>
-        </div>
-        <p style="font-size:18px; color:#5a3e36;">Target: 1,000 | Actual: 1,070 | Growth: +7%</p>
-      </div>
+  <hr class="separator">
 
-      <div class="kpi-card" style="background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">CTR</h3>
-        <div class="progress-bar" style="width:100%; height:30px; background:#e4d3c2; border-radius:15px; overflow:hidden; margin-bottom:15px;">
-          <div class="progress-fill" data-fill="3.8%" style="height:100%; width:0; background:linear-gradient(90deg,#ffd27f,#ffb957); color:#5a3e36; font-weight:bold; font-size:18px; line-height:30px; text-align:right; padding-right:12px; border-radius:15px 0 0 15px; transition:width 2s ease;">3.8%</div>
-        </div>
-        <p style="font-size:18px; color:#5a3e36;">Target: 3% | Actual: 3.8% | Clicks: 1,230</p>
-      </div>
+  <h2>Forecast vs Actual</h2>
+  <table>
+    <thead>
+      <tr><th>Metric</th><th>Forecast</th><th>Actual</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Reach</td><td>150,000</td><td>180,000</td></tr>
+      <tr><td>New Members</td><td>1,500</td><td>1,800</td></tr>
+      <tr><td>Engagement %</td><td>15%</td><td>18.2%</td></tr>
+      <tr><td>Revenue</td><td>1,200,000 EGP</td><td>1,600,000 EGP</td></tr>
+    </tbody>
+  </table>
 
-      <div class="kpi-card" style="background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">Conversion Rate</h3>
-        <div class="progress-bar" style="width:100%; height:30px; background:#e4d3c2; border-radius:15px; overflow:hidden; margin-bottom:15px;">
-          <div class="progress-fill" data-fill="6.2%" style="height:100%; width:0; background:linear-gradient(90deg,#ffd27f,#ffb957); color:#5a3e36; font-weight:bold; font-size:18px; line-height:30px; text-align:right; padding-right:12px; border-radius:15px 0 0 15px; transition:width 2s ease;">6.2%</div>
-        </div>
-        <p style="font-size:18px; color:#5a3e36;">Target: 5% | Actual: 6.2% | New VIPs: 82</p>
-      </div>
+  <hr class="separator">
 
-      <div class="kpi-card donut-container" style="background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">Retention Rate</h3>
-        <canvas id="retentionDonut" style="width:140px;height:140px;margin:10px auto;display:block;"></canvas>
-        <p style="font-size:18px; color:#5a3e36;">Target: 12% | Actual: 15% | Repeat Visits: 215</p>
-      </div>
+  <h2>ROI by Channel</h2>
+  <table>
+    <thead>
+      <tr><th>Channel</th><th>ROI Ratio</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Instagram/TikTok</td><td>5.0</td></tr>
+      <tr><td>Google Ads</td><td>4.5</td></tr>
+      <tr><td>Email</td><td>4.2</td></tr>
+      <tr><td>Landing Pages</td><td>4.6</td></tr>
+      <tr><td>Influencers</td><td>4.7</td></tr>
+    </tbody>
+  </table>
 
-      <div class="kpi-card donut-container" style="background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">Social Engagement</h3>
-        <canvas id="socialDonut" style="width:140px;height:140px;margin:10px auto;display:block;"></canvas>
-        <p style="font-size:18px; color:#5a3e36;">Target: 10% | Actual: 11.3% | Shares: 580</p>
-      </div>
+  <hr class="separator">
 
-      <div class="kpi-card" style="background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">Customer LTV</h3>
-        <div class="progress-bar" style="width:100%; height:30px; background:#e4d3c2; border-radius:15px; overflow:hidden; margin-bottom:15px;">
-          <div class="progress-fill" data-fill="125%" style="height:100%; width:0; background:linear-gradient(90deg,#ffd27f,#ffb957); color:#5a3e36; font-weight:bold; font-size:18px; line-height:30px; text-align:right; padding-right:12px; border-radius:15px 0 0 15px; transition:width 2s ease;">EGP 625</div>
-        </div>
-        <p style="font-size:18px; color:#5a3e36;">Target: EGP 500 | Actual: EGP 625 | +25%</p>
-      </div>
-
-      <div class="kpi-card" style="background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">Average Order Value</h3>
-        <div class="progress-bar" style="width:100%; height:30px; background:#e4d3c2; border-radius:15px; overflow:hidden; margin-bottom:15px;">
-          <div class="progress-fill" data-fill="115%" style="height:100%; width:0; background:linear-gradient(90deg,#ffd27f,#ffb957); color:#5a3e36; font-weight:bold; font-size:18px; line-height:30px; text-align:right; padding-right:12px; border-radius:15px 0 0 15px; transition:width 2s ease;">EGP 115</div>
-        </div>
-        <p style="font-size:18px; color:#5a3e36;">Target: EGP 100 | Actual: EGP 115 | +15% Growth</p>
-      </div>
-
-      <div class="kpi-card wide-card" style="grid-column:span 2; background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">Funnel Metrics & Drop-offs</h3>
-        <canvas id="funnelChart" style="width:100%; max-width:600px; height:300px; margin:10px auto; display:block;"></canvas>
-        <p style="font-size:18px; color:#5a3e36;">Visualizing awareness → consideration → conversion → retention → advocacy</p>
-      </div>
-
-      <div class="kpi-card wide-card" style="grid-column:span 2; background:#e6c9aa; border-radius:18px; padding:30px 25px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
-        <h3 style="font-size:22px; color:#8b5e3c; margin-bottom:18px;">Channel-wise Performance</h3>
-        <canvas id="channelChart" style="width:100%; max-width:600px; height:300px; margin:10px auto; display:block;"></canvas>
-        <p style="font-size:18px; color:#5a3e36;">Instagram, TikTok, Google Ads, Email, Influencers</p>
-      </div>
-
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('.progress-fill').forEach(fill=>{
-        const width = fill.getAttribute('data-fill');
-        setTimeout(()=>fill.style.width=width,200);
-      });
-
-      new Chart(document.getElementById('retentionDonut'),{
-        type:'doughnut',
-        data:{labels:['Retention','Drop-off'], datasets:[{data:[15,85], backgroundColor:['#b8865b','#f5e8dc'], borderColor:'#5a3e36', borderWidth:2}]},
-        options:{plugins:{legend:{position:'bottom', labels:{color:'#5a3e36', font:{family:'Times New Roman'}}}}}
-      });
-
-      new Chart(document.getElementById('socialDonut'),{
-        type:'doughnut',
-        data:{labels:['Engaged','Not Engaged'], datasets:[{data:[11.3,88.7], backgroundColor:['#b8865b','#f5e8dc'], borderColor:'#5a3e36', borderWidth:2}]},
-        options:{plugins:{legend:{position:'bottom', labels:{color:'#5a3e36', font:{family:'Times New Roman'}}}}}
-      });
-
-      new Chart(document.getElementById('funnelChart'),{
-        type:'bar',
-        data:{datasets:[{label:'Users', data:[80800,50000,1070,215,180], backgroundColor:'#d8bfa3', borderColor:'#5a3e36', borderWidth:1}]},
-        options:{responsive:true, plugins:{legend:{display:false}}, scales:{x:{ticks:{color:'#5a3e36', font:{family:'Times New Roman'}}}, y:{ticks:{color:'#5a3e36', font:{family:'Times New Roman'}}}}}
-      });
-
-      new Chart(document.getElementById('channelChart'),{
-        type:'bar',
-        data:{labels:['Instagram/TikTok','Google Ads','Email','Landing Pages','Influencers'], datasets:[{label:'Conversions', data:[500,250,150,120,50], backgroundColor:'#b8865b', borderColor:'#5a3e36', borderWidth:1}]},
-        options:{responsive:true, plugins:{legend:{display:false}}, scales:{x:{ticks:{color:'#5a3e36', font:{family:'Times New Roman'}}}, y:{ticks:{color:'#5a3e36', font:{family:'Times New Roman'}}}}}
-      });
-    });
-  </script>
+  <h2>Weekly Reach & Engagement</h2>
+  <table>
+    <thead>
+      <tr><th>Week</th><th>Reach</th><th>Engagement %</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Week 1</td><td>12,000</td><td>10%</td></tr>
+      <tr><td>Week 2</td><td>14,000</td><td>11%</td></tr>
+      <tr><td>Week 3</td><td>15,000</td><td>12%</td></tr>
+      <tr><td>Week 4</td><td>16,000</td><td>13%</td></tr>
+      <tr><td>Week 5</td><td>16,500</td><td>14%</td></tr>
+      <tr><td>Week 6</td><td>17,000</td><td>15%</td></tr>
+      <tr><td>Week 7</td><td>17,500</td><td>16%</td></tr>
+      <tr><td>Week 8</td><td>18,000</td><td>16.5%</td></tr>
+      <tr><td>Week 9</td><td>18,500</td><td>17%</td></tr>
+      <tr><td>Week 10</td><td>19,000</td><td>17.5%</td></tr>
+      <tr><td>Week 11</td><td>19,500</td><td>18%</td></tr>
+      <tr><td>Week 12</td><td>20,000</td><td>18.2%</td></tr>
+    </tbody>
+  </table>
 </section>
+
+</body>
+</html>

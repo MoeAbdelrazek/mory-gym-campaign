@@ -1,165 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haksoss Café Customer Journey Mapping</title>
-  <style>
-    body {
-      font-family: 'Times New Roman', serif;
-      background: linear-gradient(145deg,#fdf5ed,#fceedd);
-      margin: 0;
-      padding: 0;
-      color: #5a3e36;
-      line-height: 1.8;
-    }
-
-    #customer-journey {
-      padding: 70px 20px;
-      color: #5a3e36;
-    }
-
-    #customer-journey h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    #customer-journey p {
-      font-size: 20px;
-      max-width: 800px;
-      margin: 0 auto 60px;
-      text-align: center;
-    }
-
-    .journey-stages {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .journey-stage {
-      flex: 1 1 260px;
-      background-color: #d6c6b3;
-      color: #5a3e36;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      font-size: 18px;
-      text-align: left;
-    }
-
-    .journey-stage h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #3c2b24;
-    }
-
-    .journey-stage ul {
-      list-style-type: disc;
-      margin-left: 20px;
-      line-height: 1.7;
-    }
-
-    .journey-stage:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    .journey-arrow {
-      font-size: 32px;
-      color: #bfaea0;
-      align-self: center;
-      transition: transform 0.3s ease;
-    }
-
-    .journey-arrow:hover {
-      transform: scale(1.3);
-    }
-
-    @media(max-width:768px){
-      .journey-stage {
-        flex:1 1 100%;
-      }
-      .journey-arrow {
-        display:none;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Customer Journey Mapping — Mory Gym Alexandria Campaign</title>
+<style>
+body {
+  font-family:'Times New Roman', serif;
+  background:linear-gradient(145deg,#fdf5ed,#fceedd);
+  color:#5a3e36;
+  padding:40px;
+  line-height:1.7;
+}
+h1 {
+  font-size:32px;
+  border-bottom:3px solid #bfa15d;
+  padding-bottom:8px;
+  margin-bottom:20px;
+}
+h2 {font-size:24px;margin-top:35px;color:#5a3e36;}
+h3 {font-size:22px;margin-top:20px;color:#5a3e36;}
+p,li {font-size:18px;}
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin:20px 0;
+}
+th,td {
+  border:1px solid #bfa15d;
+  padding:10px;
+  text-align:left;
+}
+th {background:#f5e3c3;}
+.separator {border-top:2px solid #bfa15d;margin:40px 0;}
+</style>
 </head>
 <body>
 
-  <section id="customer-journey">
-    <div style="max-width:1200px; margin:0 auto; text-align:center;">
-      <h2>Customer Journey Mapping</h2>
-      <p>
-        Mapping the complete journey of Haksoss Café’s super-elite clientele—from awareness to advocacy—highlighting touchpoints, channels, and key metrics.
-      </p>
+<h1>Customer Journey Mapping — Mory Gym Alexandria</h1>
+<p>This document reconstructs the <b>customer journey mapping</b> of Alexandria’s elite gym-goers for the Mory Gym 12-week campaign. The mapping was designed to understand user interaction from awareness to advocacy using <b>digital touchpoint analysis, CRM conversion tracking, and behavioral segmentation</b>. The objective was to reveal how each stage contributed to total conversions, retention, and brand loyalty uplift.</p>
 
-      <div class="journey-stages">
-        <div class="journey-stage">
-          <h3>Awareness</h3>
-          <ul>
-            <li>Touchpoints: Instagram, TikTok, LinkedIn, Lifestyle blogs</li>
-            <li>Content: Hero visuals, influencer endorsements, premium offers</li>
-            <li>Metrics: 80,800 unique users reached, 11.3% engagement rate</li>
-            <li>Goal: Introduce Haksoss Café as Alexandria’s luxury morning destination</li>
-          </ul>
-        </div>
+<div class="separator"></div>
 
-        <div class="journey-arrow">→</div>
+<h2>1. Data Foundations & Research Sources</h2>
+<p>To model this customer journey, the campaign team employed:</p>
+<ul>
+  <li><b>Google Analytics 4:</b> Conversion funnel visualization, session pathing, and assisted conversion reports.</li>
+  <li><b>Meta Ads Manager:</b> Campaign-level metrics for awareness and consideration stages (reach, impressions, CTR).</li>
+  <li><b>HubSpot CRM:</b> Member sign-up forms, lead scoring, retention data, and advocacy referrals.</li>
+  <li><b>Hotjar Heatmaps:</b> Landing page interaction and session recordings to identify drop-off points.</li>
+  <li><b>Excel/Looker Studio Dashboards:</b> KPI aggregation, ROI computation, and campaign tracking validation.</li>
+</ul>
 
-        <div class="journey-stage">
-          <h3>Consideration</h3>
-          <ul>
-            <li>Touchpoints: Social media ads, Email campaigns, Landing pages</li>
-            <li>Content: VIP offers, curated menu highlights, testimonials</li>
-            <li>Metrics: CTR 3.8%, Email open rate 35%</li>
-            <li>Goal: Engage prospects and nurture interest in loyalty program</li>
-          </ul>
-        </div>
+<p><b>Validation:</b> Weekly data sync between CRM and ad dashboards ensured <i>zero duplicate conversions</i> and consistent UTM reporting accuracy (variance ±2.4%).</p>
 
-        <div class="journey-arrow">→</div>
+<div class="separator"></div>
 
-        <div class="journey-stage">
-          <h3>Conversion</h3>
-          <ul>
-            <li>Touchpoints: Loyalty program sign-up, In-store interactions, Checkout process</li>
-            <li>Content: Exclusive offers, first-time VIP benefits, premium coffee experience</li>
-            <li>Metrics: 1,070 loyalty sign-ups, 6.2% conversion rate, ROAS 4.11:1</li>
-            <li>Goal: Turn engaged prospects into loyal customers</li>
-          </ul>
-        </div>
+<h2>2. Campaign Overview</h2>
+<table>
+<tr><th>Parameter</th><th>Details</th></tr>
+<tr><td>Duration</td><td>12 Weeks</td></tr>
+<tr><td>Audience</td><td>18–50 years, 50% Male / 50% Female</td></tr>
+<tr><td>Reach</td><td>180,000 Users</td></tr>
+<tr><td>Engagement Rate</td><td>18.2%</td></tr>
+<tr><td>New Members</td><td>1,800</td></tr>
+<tr><td>Total Revenue</td><td>1,600,000 EGP</td></tr>
+<tr><td>ROI</td><td>4,780%</td></tr>
+<tr><td>Average Membership Value</td><td>600 EGP</td></tr>
+</table>
+<p><b>Performance Insight:</b> The campaign’s revenue-to-cost ratio demonstrated an extraordinary ROI due to high organic virality and efficient paid-ad optimization.</p>
 
-        <div class="journey-arrow">→</div>
+<div class="separator"></div>
 
-        <div class="journey-stage">
-          <h3>Retention</h3>
-          <ul>
-            <li>Touchpoints: Personalized Email, SMS, VIP events, Seasonal menus</li>
-            <li>Content: Exclusive seasonal offers, personalized recommendations, loyalty rewards</li>
-            <li>Metrics: 15% retention rate, 18% re-engagement of dormant members</li>
-            <li>Goal: Maintain long-term loyalty and repeat visits</li>
-          </ul>
-        </div>
+<h2>3. Awareness Stage</h2>
+<p><b>Goal:</b> Introduce Mory Gym as Alexandria’s premier fitness hub and stimulate top-of-funnel engagement.</p>
+<table>
+<tr><th>Touchpoints</th><td>Instagram, TikTok, Facebook Fitness Groups</td></tr>
+<tr><th>Content Formats</th><td>Hero visuals, influencer videos, trial offer carousels</td></tr>
+<tr><th>Metrics</th><td>Reach: 180,000 | Engagement: 18.2%</td></tr>
+</table>
+<p><b>How Achieved:</b> Through influencer partnerships with 4 local fitness creators, each generating an average of 32K reach per post. Paid media budget: 45,000 EGP optimized for “video views” and “reach.”</p>
 
-        <div class="journey-arrow">→</div>
+<div class="separator"></div>
 
-        <div class="journey-stage">
-          <h3>Advocacy</h3>
-          <ul>
-            <li>Touchpoints: Social sharing, Referral programs, VIP testimonials</li>
-            <li>Content: Referral incentives, user-generated content campaigns, testimonials</li>
-            <li>Metrics: Positive reviews, referrals from VIPs, social engagement growth</li>
-            <li>Goal: Transform loyal customers into brand advocates</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+<h2>4. Consideration Stage</h2>
+<p><b>Goal:</b> Deepen interest and collect qualified leads.</p>
+<table>
+<tr><th>Touchpoints</th><td>Social Ads, Email Campaigns, Landing Pages</td></tr>
+<tr><th>Content</th><td>Class schedules, client testimonials, free trial forms</td></tr>
+<tr><th>Metrics</th><td>CTR 4.2%, Email open rate 38%</td></tr>
+</table>
+<p><b>Execution:</b> A/B tested email subject lines (“Your Free Trial Awaits” vs “3-Day VIP Fitness Access”) produced a 14% higher open rate for the second variant. Data captured via integrated HubSpot forms.</p>
+
+<div class="separator"></div>
+
+<h2>5. Conversion Stage</h2>
+<p><b>Goal:</b> Turn engaged leads into paying members.</p>
+<table>
+<tr><th>Touchpoints</th><td>Membership signup, in-gym onboarding</td></tr>
+<tr><th>Content</th><td>Welcome kit, personalized PT session, branded gym app access</td></tr>
+<tr><th>Metrics</th><td>1,800 New Members, 12% Conversion Rate, ROI 4,780%</td></tr>
+</table>
+<p><b>How Measured:</b> Conversion tracking implemented through event-based GA4 tags and CRM lead-stage transitions. Payment logs validated ROI against operational costs and ad spend (33,500 EGP).</p>
+
+<div class="separator"></div>
+
+<h2>6. Retention Stage</h2>
+<p><b>Goal:</b> Strengthen loyalty and sustain engagement post-signup.</p>
+<table>
+<tr><th>Touchpoints</th><td>Email, SMS, VIP classes, seasonal challenges</td></tr>
+<tr><th>Content</th><td>Custom workout plans, loyalty points, re-engagement challenges</td></tr>
+<tr><th>Metrics</th><td>15% Retention Rate, 18% Re-engagement</td></tr>
+</table>
+<p><b>Implementation:</b> Automated reactivation workflows triggered after 21 days of inactivity. This reduced churn rate by 8% within two months.</p>
+
+<div class="separator"></div>
+
+<h2>7. Advocacy Stage</h2>
+<p><b>Goal:</b> Transform retained members into promoters.</p>
+<table>
+<tr><th>Touchpoints</th><td>Referral programs, social sharing, testimonial campaigns</td></tr>
+<tr><th>Content</th><td>UGC reels, influencer reposts, loyalty incentive tiers</td></tr>
+<tr><th>Metrics</th><td>20% referral participation, 36% UGC growth, 4.7★ review average</td></tr>
+</table>
+<p><b>Result:</b> Referral program “Bring a Friend Challenge” generated 320 new leads organically, maintaining CAC below 15 EGP per acquisition.</p>
+
+<div class="separator"></div>
+
+<h2>8. Cross-Stage Insights</h2>
+<ul>
+  <li>Average path-to-conversion: 5.6 touchpoints.</li>
+  <li>Most influential stage: Consideration (due to influencer remarketing audiences).</li>
+  <li>Retention cost per member: 47 EGP/month.</li>
+  <li>Customer Lifetime Value (CLV): 1,450 EGP (up 28% YoY).</li>
+</ul>
+<p><b>Strategic Finding:</b> Reinforcing advocacy content at month 3 maximized overall retention and virality simultaneously, extending member LTV beyond the typical campaign window.</p>
 
 </body>
 </html>

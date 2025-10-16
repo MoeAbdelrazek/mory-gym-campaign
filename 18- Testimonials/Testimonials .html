@@ -1,144 +1,141 @@
-<section id="testimonials">
-  <h2 class="section-title">Testimonials & User Feedback</h2>
-  <p class="section-intro">
-    Real reflections from clients, customers, and internal team members, highlighting the impact and success of the campaign.
-  </p>
-
-  <!-- Testimonials Cards -->
-  <div class="testimonial-cards">
-    
-    <!-- Client Feedback -->
-    <div class="testimonial-card">
-      <div class="card-header client">
-        <h3>Client Feedback</h3>
-      </div>
-      <div class="card-content">
-        <p>"The campaign exceeded our expectations — ROAS and engagement were outstanding. Haksoss truly captured our brand's premium essence." – <strong>Marketing Director, Haksoss Café</strong></p>
-        <div class="metrics">
-          <div class="metric"><span>Engagement:</span> 11.3%</div>
-          <div class="metric"><span>Conversions:</span> 6.2%</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- User / Customer Feedback -->
-    <div class="testimonial-card">
-      <div class="card-header user">
-        <h3>Customer Feedback</h3>
-      </div>
-      <div class="card-content">
-        <p>"I loved the Hero Latte! The storytelling on Instagram made me feel part of the VIP experience. Signed up immediately for the loyalty program." – <strong>@UPEliteAlex</strong></p>
-        <div class="metrics">
-          <div class="metric"><span>Social Shares:</span> 580</div>
-          <div class="metric"><span>UGC Rate:</span> 2.1%</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Internal Team Reflections -->
-    <div class="testimonial-card">
-      <div class="card-header internal">
-        <h3>Internal Team Reflections</h3>
-      </div>
-      <div class="card-content">
-        <p>"The integration between social, email, and search campaigns worked flawlessly. Data-driven decisions during A/B testing were crucial for performance optimization." – <strong>Campaign Manager</strong></p>
-        <div class="metrics">
-          <div class="metric"><span>AB Tests:</span> 12 completed</div>
-          <div class="metric"><span>Winner Improvements:</span> +3% Open Rate, +0.8% Conversion</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Supporting Quotes -->
-    <div class="testimonial-card">
-      <div class="card-header quotes">
-        <h3>Supporting Quotes</h3>
-      </div>
-      <div class="card-content">
-        <ul>
-          <li>"High-value audiences love the personalized touch." – Social Media Analyst</li>
-          <li>"Seasonal visuals boosted engagement significantly." – Creative Lead</li>
-          <li>"Urgency language in CTAs increased conversion by 0.8%." – Paid Ads Specialist</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mory Gym Testimonials & User Feedback</title>
 <style>
-#testimonials {
-  border-radius: 20px;
-  padding: 60px 40px;
-  margin: 70px auto;
-  background: linear-gradient(145deg, #fdf5ed, #fceedd);
-  max-width: 1200px;
-  font-family: 'Times New Roman', serif;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-#testimonials .section-title {
-  text-align: center;
-  color: #5a3e36;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-#testimonials .section-intro {
-  text-align: center;
-  color: #5a3e36;
-  margin-bottom: 45px;
-  font-size: 20px;
-}
-
-/* Testimonials Cards */
-.testimonial-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 30px;
-}
-.testimonial-card {
-  background: #d6bfa3;
-  border-radius: 20px;
-  padding: 28px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  transition: all 0.3s ease;
-}
-.testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(138,96,60,0.25);
-}
-.card-header {
-  padding: 14px;
-  border-radius: 18px 18px 0 0;
-  text-align: center;
-  font-family: 'Times New Roman', serif;
-  color: #fff;
-  font-size: 22px;
-}
-.card-header.client { background: #a65f3b; }
-.card-header.user { background: #c08054; }
-.card-header.internal { background: #8b5e3c; }
-.card-header.quotes { background: #d69a7f; color: #5a3e2b; }
-
-.card-content {
-  padding: 20px;
-  color: #5a3e36;
-  font-size: 18px;
-  line-height: 1.6;
-}
-.card-content p, .card-content ul { margin-bottom: 10px; }
-.card-content ul { padding-left: 25px; list-style-type: disc; }
-
-.metrics {
-  margin-top: 14px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-.metric {
-  font-size: 18px;
-  background: #f9ede3;
-  padding: 6px 12px;
-  border-radius: 10px;
-  color: #5a3e36;
-  font-weight: 600;
-}
+  body {
+    font-family: 'Times New Roman', serif;
+    background: linear-gradient(145deg, #fdf5ed, #fceedd);
+    color: #5a3e36;
+    padding: 40px;
+    line-height: 1.7;
+  }
+  h1, h2, h3 {
+    text-align: center;
+    color: #5a3e36;
+  }
+  h1 { font-size: 32px; border-bottom: 3px solid #d6b49a; padding-bottom: 10px; }
+  h2 { font-size: 26px; margin-top: 40px; border-bottom: 2px solid #d6b49a; padding-bottom: 6px; }
+  h3 { font-size: 22px; margin-top: 25px; color: #7b5243; }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+  .content-card, .chart-card {
+    background:#fffaf5;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+  }
+  .italic { font-style: italic; margin-top: 10px; color:#7b5243; }
+  canvas { margin-top: 20px; }
+  .divider { margin:50px 0; border-top:3px double #c3a38d; }
 </style>
+</head>
+<body>
+
+<h1>Testimonials & User Feedback</h1>
+
+<h2>1. Campaign Impact Feedback</h2>
+<p>
+Hear directly from Mory Gym members, clients, and the internal team about the impact of our 12-week campaign.
+</p>
+
+<div class="divider"></div>
+
+<h2>2. Testimonials</h2>
+<div class="cards-grid">
+  <div class="content-card">
+    <h3>Client Feedback</h3>
+    <p>“Mory Gym’s campaign exceeded our expectations. New member acquisition was outstanding and engagement on our social channels skyrocketed!”</p>
+    <p class="italic">– Ahmed El-Sayed, Marketing Director</p>
+  </div>
+
+  <div class="content-card">
+    <h3>Member Feedback</h3>
+    <p>“I joined Mory Gym during this campaign and the experience was amazing. The ads and emails convinced me, and the facilities are top-notch!”</p>
+    <p class="italic">– Sara Mahmoud, Member</p>
+  </div>
+
+  <div class="content-card">
+    <h3>Internal Team Reflection</h3>
+    <p>“The 12-week campaign taught us how to segment audiences effectively and optimize paid media for maximum ROI. Results were above all projections.”</p>
+    <p class="italic">– Digital Marketing Team</p>
+  </div>
+
+  <div class="content-card">
+    <h3>Referral & Social Proof</h3>
+    <p>“We saw a 45% increase in member referrals during the campaign. Many new members mentioned seeing our posts and stories before signing up.”</p>
+    <p class="italic">– Community Engagement Report</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<h2>3. Metrics & Visuals</h2>
+<div class="cards-grid">
+  <div class="chart-card">
+    <h3>Member Satisfaction Metrics</h3>
+    <canvas id="memberSatisfactionChart" width="400" height="300"></canvas>
+  </div>
+
+  <div class="chart-card">
+    <h3>Referral Mentions & Engagement</h3>
+    <canvas id="referralEngagementChart" width="400" height="300"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  new Chart(document.getElementById('memberSatisfactionChart').getContext('2d'), {
+    type:'doughnut',
+    data:{
+      labels:['Very Satisfied','Satisfied','Neutral','Dissatisfied'],
+      datasets:[{
+        data:[55,30,10,5],
+        backgroundColor:['#f0e6d2','#e0cfa5','#bfae92','#8c7b65'],
+        borderColor:'#f5f5f5',
+        borderWidth:2
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{ position:'bottom', labels:{ color:'#5a3e36', font:{size:16} } },
+        tooltip:{ backgroundColor:'#fffaf5', titleColor:'#5a3e36', bodyColor:'#5a3e36' }
+      }
+    }
+  });
+
+  new Chart(document.getElementById('referralEngagementChart').getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:['Instagram','TikTok','Email','Word of Mouth','Facebook'],
+      datasets:[{
+        label:'Referrals & Mentions',
+        data:[320,280,150,450,200],
+        backgroundColor:'#e0cfa5',
+        borderColor:'#5a3e36',
+        borderWidth:2
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{ display:false },
+        tooltip:{ backgroundColor:'#fffaf5', titleColor:'#5a3e36', bodyColor:'#5a3e36' }
+      },
+      scales:{
+        y:{ beginAtZero:true, ticks:{ color:'#5a3e36', font:{size:14} } },
+        x:{ ticks:{ color:'#5a3e36', font:{size:14} } }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
