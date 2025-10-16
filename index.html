@@ -2391,11 +2391,11 @@ new Chart(document.getElementById('topPagesChart').getContext('2d'),{
   <!-- Visuals Gallery -->
   <h3 class="subheading">Campaign Visuals Gallery</h3>
   <div class="gallery">
-    <img src="3_assets/Images/Gym_Interior.jpg" alt="Gym Interior" loading="lazy">
-    <img src="3_assets/Images/Trainer_Class.jpg" alt="Trainer Class" loading="lazy">
-    <img src="3_assets/Images/Workout_Action.jpg" alt="Workout Action" loading="lazy">
-    <img src="3_assets/Images/Lifestyle_Training.jpg" alt="Lifestyle Training" loading="lazy">
-    <img src="3_assets/Images/Group_Class.jpg" alt="Group Class" loading="lazy">
+    <img src="./3_assets/Images/Gym_Interior.jpg" alt="Gym Interior" loading="lazy">
+    <img src="./3_assets/Images/Trainer_Class.jpg" alt="Trainer Class" loading="lazy">
+    <img src="./3_assets/Images/Workout_Action.jpg" alt="Workout Action" loading="lazy">
+    <img src="./3_assets/Images/Lifestyle_Training.jpg" alt="Lifestyle Training" loading="lazy">
+    <img src="./3_assets/Images/Group_Class.jpg" alt="Group Class" loading="lazy">
   </div>
 
   <!-- ROI by Channel -->
@@ -2408,104 +2408,27 @@ new Chart(document.getElementById('topPagesChart').getContext('2d'),{
 
 <style>
 .panel { 
-  max-width:1200px; 
-  margin:40px auto; 
-  padding:45px 35px; 
-  background:#1f1f1f; 
-  border-radius:24px; 
-  box-shadow:0 10px 25px rgba(0,0,0,0.15); 
-  font-family:'Times New Roman', serif; 
-  color:#d4c1a6; 
-  text-align:center; 
+  max-width:1200px; margin:40px auto; padding:45px 35px; 
+  background:#1f1f1f; border-radius:24px; box-shadow:0 10px 25px rgba(0,0,0,0.15); 
+  font-family:'Times New Roman', serif; color:#d4c1a6; text-align:center; 
 }
 
-.section-title { 
-  font-size:32px; 
-  color:#f5f5f5; 
-  margin-bottom:20px; 
-  border-bottom:3px solid #d4c1a6; 
-  padding-bottom:8px; 
-}
+.section-title { font-size:32px; color:#f5f5f5; margin-bottom:20px; border-bottom:3px solid #d4c1a6; padding-bottom:8px; }
+.section-intro { font-size:22px; color:#d4c1a6; max-width:900px; margin:0 auto 50px; }
+.subheading { font-size:28px; color:#f5f5f5; margin-bottom:25px; }
 
-.section-intro { 
-  font-size:22px; 
-  color:#d4c1a6; 
-  max-width:900px; 
-  margin:0 auto 50px; 
-}
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; margin-bottom:50px; }
+.content-card { background:#2a2a2a; padding:25px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.4); transition:0.3s; }
+.content-card:hover { transform:translateY(-5px); box-shadow:0 12px 25px rgba(0,0,0,0.5); }
+.content-card h4 { font-size:22px; color:#f5f5f5; margin-bottom:10px; }
+.content-card p { font-size:18px; color:#d4c1a6; }
 
-.subheading { 
-  font-size:28px; 
-  color:#f5f5f5; 
-  margin-bottom:25px; 
-}
+.gallery { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-bottom:50px; opacity:1 !important; transform:none !important; }
+.gallery img { width:250px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.3); transition:0.3s; display:block; }
+.gallery img:hover { transform:scale(1.05); }
 
-.cards-grid { 
-  display:grid; 
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); 
-  gap:25px; 
-  margin-bottom:50px; 
-}
-
-.content-card { 
-  background:#2a2a2a; 
-  padding:25px; 
-  border-radius:20px; 
-  box-shadow:0 6px 18px rgba(0,0,0,0.4); 
-  transition:0.3s; 
-}
-
-.content-card:hover { 
-  transform:translateY(-5px); 
-  box-shadow:0 12px 25px rgba(0,0,0,0.5); 
-}
-
-.content-card h4 { 
-  font-size:22px; 
-  color:#f5f5f5; 
-  margin-bottom:10px; 
-}
-
-.content-card p { 
-  font-size:18px; 
-  color:#d4c1a6; 
-}
-
-.gallery { 
-  display:flex; 
-  flex-wrap:wrap; 
-  gap:20px; 
-  justify-content:center; 
-  margin-bottom:50px; 
-  opacity:1 !important; 
-  transform:none !important; 
-}
-
-.gallery img { 
-  width:250px; 
-  border-radius:20px; 
-  box-shadow:0 6px 18px rgba(0,0,0,0.3); 
-  transition:0.3s; 
-  display:block; 
-}
-
-.gallery img:hover { 
-  transform:scale(1.05); 
-}
-
-.chart-card { 
-  background:#2a2a2a; 
-  padding:35px; 
-  border-radius:20px; 
-  box-shadow:0 6px 18px rgba(0,0,0,0.4); 
-  margin-bottom:50px; 
-}
-
-.chart-card h3 { 
-  font-size:24px; 
-  color:#f5f5f5; 
-  margin-bottom:25px; 
-}
+.chart-card { background:#2a2a2a; padding:35px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.4); margin-bottom:50px; }
+.chart-card h3 { font-size:24px; color:#f5f5f5; margin-bottom:25px; }
 
 @media(max-width:768px){
   .panel{padding:35px 18px;}
@@ -2531,17 +2454,12 @@ new Chart(document.getElementById('roiChannelChart').getContext('2d'),{
   },
   options:{
     responsive:true,
-    plugins:{ 
-      legend:{ labels:{ color:'#f5f5f5', font:{size:16} } }, 
-      tooltip:{ backgroundColor:'#2a2a2a', titleColor:'#f5f5f5', bodyColor:'#d4c1a6' } 
-    },
-    scales:{ 
-      x:{ ticks:{ color:'#f5f5f5', font:{size:16} } }, 
-      y:{ beginAtZero:true, ticks:{ color:'#f5f5f5', font:{size:16} } } 
-    }
+    plugins:{ legend:{ labels:{ color:'#f5f5f5', font:{size:16} } }, tooltip:{ backgroundColor:'#2a2a2a', titleColor:'#f5f5f5', bodyColor:'#d4c1a6' } },
+    scales:{ x:{ ticks:{ color:'#f5f5f5', font:{size:16} } }, y:{ beginAtZero:true, ticks:{ color:'#f5f5f5', font:{size:16} } } }
   }
 });
 </script>
+
 
 
 
